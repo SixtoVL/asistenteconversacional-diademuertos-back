@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { buscarHechos, coincideRegion, evaluar } from './engine.js';
+import { buscarHechos, coincideRegion, coincideTermino, evaluar } from './engine.js';
 import type { Hecho } from '../knowledge-base/kb.schemas.js';
 import type { Regla } from './engine.js';
 
@@ -51,6 +51,18 @@ describe('buscarHechos', () => {
 
   it('devuelve vacío sin coincidencias', () => {
     expect(buscarHechos(hechos, ['xyz'])).toEqual([]);
+  });
+});
+
+describe('coincideTermino', () => {
+  it('exige palabra completa ("sal" no matchea "sale")', () => {
+    expect(coincideTermino('sale de la casa', 'sal')).toBe(false);
+    expect(coincideTermino('con sal y agua', 'sal')).toBe(true);
+  });
+
+  it('tolera plural en -s/-es ("vela" matchea "velas")', () => {
+    expect(coincideTermino('encienden velas', 'vela')).toBe(true);
+    expect(coincideTermino('rumbo al panteón', 'pan')).toBe(false);
   });
 });
 

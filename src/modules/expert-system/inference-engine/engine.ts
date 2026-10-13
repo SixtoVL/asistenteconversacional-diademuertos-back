@@ -26,19 +26,29 @@ interface HechoPuntuado {
   puntaje: number;
 }
 
+function escaparRegex(texto: string): string {
+  return texto.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+/** Coincidencia por palabra completa, tolerando plural en -s/-es. Evita falsos como "sal" en "sale". */
+export function coincideTermino(texto: string, termino: string): boolean {
+  const patron = new RegExp(`\\b${escaparRegex(termino)}(s|es)?\\b`);
+  return patron.test(texto);
+}
+
 function puntuarHecho(hecho: Hecho, terminos: string[]): number {
   const tema = normalizar(hecho.tema);
   const afirmacion = normalizar(hecho.afirmacion);
   const descripcion = normalizar(hecho.descripcion);
   let puntaje = 0;
   for (const termino of terminos) {
-    if (tema.includes(termino)) {
+    if (coincideTermino(tema, termino)) {
       puntaje += 3;
     }
-    if (afirmacion.includes(termino)) {
+    if (coincideTermino(afirmacion, termino)) {
       puntaje += 2;
     }
-    if (descripcion.includes(termino)) {
+    if (coincideTermino(descripcion, termino)) {
       puntaje += 1;
     }
   }

@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "build": "tsc",
+    "postbuild": "node -e \"const fs=require('fs');const d='dist/modules/expert-system/knowledge-base/';for(const f of ['fuentes.json','hechos.json'])fs.copyFileSync('src/modules/expert-system/knowledge-base/'+f,d+f);console.log('KB copiada a dist');\"",
     "start": "node dist/server.js",
     "test": "vitest run",
     "lint": "eslint ."

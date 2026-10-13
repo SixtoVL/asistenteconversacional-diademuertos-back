@@ -1,16 +1,16 @@
 import { buscarHechos } from '../inference-engine/engine.js';
 import type { Caso, Conclusion, Regla } from '../inference-engine/engine.js';
 import type { Hecho } from '../knowledge-base/kb.schemas.js';
-import { REGIONES, buscarIntencion } from '../intents/intents.js';
-
-const OPCIONES_REGION = REGIONES.map((region) => ({ id: region.id, etiqueta: region.etiqueta }));
+import { ELEMENTOS, REGIONES, buscarIntencion } from '../intents/intents.js';
+import { buscarPreguntaGuiada } from '../dialogo.js';
 
 function terminosDeIntencion(intencionId: string, datos: Record<string, string>): string[] {
   const intencion = buscarIntencion(intencionId);
   const terminos = intencion ? [...intencion.terminosBusqueda] : [];
-  const elemento = datos['elemento'];
-  if (elemento) {
-    terminos.push(elemento);
+  const elementoId = datos['elemento'];
+  if (elementoId) {
+    const elemento = ELEMENTOS.find((item) => item.id === elementoId);
+    terminos.push(...(elemento ? elemento.terminos : [elementoId]));
   }
   return terminos;
 }
@@ -32,6 +32,18 @@ function buscarParaCaso(caso: Caso, hechos: Hecho[], limite = 3): Hecho[] {
     region: caso.datos['region'],
     limite,
   });
+}
+
+const REGIONES_ACOTABLES = ['puebla', 'campeche', 'nayarit'];
+
+function regionesConHechos(caso: Caso, hechos: Hecho[]): string[] {
+  if (!caso.intencionId) {
+    return [];
+  }
+  const terminos = terminosDeIntencion(caso.intencionId, caso.datos);
+  return REGIONES_ACOTABLES.filter(
+    (region) => buscarHechos(hechos, terminos, { region, limite: 1 }).length > 0,
+  );
 }
 
 export const REGLAS: Regla[] = [
@@ -64,11 +76,14 @@ export const REGLAS: Regla[] = [
     descripcion: 'Si piden recomendación sin indicar región, pregunta la región con opciones.',
     prioridad: 30,
     cuando: (caso) => caso.intencionId === 'recomendar' && !caso.datos['region'],
-    entonces: (): Conclusion => ({
-      tipo: 'pregunta_guiada',
-      texto: '¿Para qué región quieres la guía de ofrenda?',
-      opciones: OPCIONES_REGION,
-    }),
+    entonces: (): Conclusion => {
+      const pregunta = buscarPreguntaGuiada('region-ofrenda');
+      return {
+        tipo: 'pregunta_guiada',
+        texto: pregunta?.texto ?? '¿Para qué región quieres la guía de ofrenda?',
+        opciones: pregunta?.opciones ?? [],
+      };
+    },
   },
   {
     id: 'R-recomendar-con-region',
@@ -88,6 +103,38 @@ export const REGLAS: Regla[] = [
         titulo: `Guía de ofrenda: ${etiqueta}`,
         detalle: encontrados.map((hecho) => `• ${hecho.afirmacion}`).join('\n'),
         hechos: encontrados,
+      };
+    },
+  },
+  {
+    id: 'R-significado-sin-elemento',
+    descripcion: 'Si preguntan por un significado sin elemento reconocible, pide el elemento con opciones.',
+    prioridad: 45,
+    cuando: (caso) => caso.intencionId === 'significado_elemento' && !caso.datos['elemento'],
+    entonces: (): Conclusion => {
+      const pregunta = buscarPreguntaGuiada('elemento-significado');
+      return {
+        tipo: 'pregunta_guiada',
+        texto:
+          pregunta?.texto ?? '¿Sobre qué elemento de la ofrenda quieres saber su significado?',
+        opciones: pregunta?.opciones ?? [],
+      };
+    },
+  },
+  {
+    id: 'R-tradicion-sin-region',
+    descripcion: 'Si preguntan por tradiciones sin región y hay hechos de varias regiones, pide la región.',
+    prioridad: 46,
+    cuando: (caso, hechos) =>
+      caso.intencionId === 'tradicion' &&
+      !caso.datos['region'] &&
+      regionesConHechos(caso, hechos).length >= 2,
+    entonces: (): Conclusion => {
+      const pregunta = buscarPreguntaGuiada('region-tradicion');
+      return {
+        tipo: 'pregunta_guiada',
+        texto: pregunta?.texto ?? '¿De qué región te interesan las tradiciones?',
+        opciones: pregunta?.opciones ?? [],
       };
     },
   },

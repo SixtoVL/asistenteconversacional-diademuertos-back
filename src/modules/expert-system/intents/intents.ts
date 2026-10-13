@@ -40,8 +40,8 @@ export const INTENCIONES: Intencion[] = [
   },
   {
     id: 'significado_elemento',
-    palabrasClave: ['significa', 'significado', 'que es', 'cempasuchil', 'flor', 'flores', 'pan', 'vela', 'veladora', 'velas', 'incienso', 'copal', 'foto', 'fotografia', 'altar', 'ofrenda', 'elemento', 'elementos', 'papel picado', 'calavera', 'cruz', 'agua', 'sal', 'mole', 'atole', 'fruta', 'itacate', 'petate'],
-    terminosBusqueda: ['ofrenda', 'significado'],
+    palabrasClave: ['significa', 'significado', 'que es', 'cempasuchil', 'flor', 'flores', 'pan', 'panes', 'vela', 'veladora', 'velas', 'veladoras', 'incienso', 'copal', 'foto', 'fotografia', 'fotos', 'retrato', 'altar', 'ofrenda', 'elemento', 'elementos', 'papel picado', 'calavera', 'calaveras', 'calaverita', 'cruz', 'cruces', 'agua', 'sal', 'mole', 'atole', 'atoles', 'fruta', 'frutas', 'itacate', 'itacates', 'petate', 'petates'],
+    terminosBusqueda: [],
     prioridad: 40,
   },
   {
@@ -59,7 +59,7 @@ export const INTENCIONES: Intencion[] = [
   {
     id: 'tradicion',
     palabrasClave: ['muerte', 'muertos', 'difunto', 'difuntos', 'tradicion', 'tradiciones', 'cora', 'coras', 'canasta', 'canastas', 'huesos', 'pomuch', 'hanal', 'pixan', 'ritual', 'costumbre', 'panteon', 'angelitos', 'tecolote', 'inframundo', 'animas', 'alma', 'velacion'],
-    terminosBusqueda: ['muerte', 'muertos', 'tradicion', 'ritual'],
+    terminosBusqueda: ['tradicion', 'ritual', 'costumbre'],
     prioridad: 70,
   },
 ];
@@ -83,13 +83,23 @@ export const REGIONES: RegionMatch[] = [
   },
 ];
 
-/** Elementos de ofrenda reconocibles -> término de búsqueda en la base. */
-const ELEMENTOS: Array<{ id: string; palabrasClave: string[] }> = [
-  { id: 'cempasuchil', palabrasClave: ['cempasuchil', 'flor de muerto', 'flor'] },
-  { id: 'pan', palabrasClave: ['pan'] },
-  { id: 'vela', palabrasClave: ['vela', 'veladora', 'velas', 'cirio', 'luz'] },
-  { id: 'incienso', palabrasClave: ['incienso', 'copal', 'sahumerio'] },
-  { id: 'fotografia', palabrasClave: ['foto', 'fotografia', 'retrato'] },
+/** Elementos de ofrenda reconocibles. `palabrasClave` detecta la mención; `terminos` busca en la base. */
+export const ELEMENTOS: Array<{ id: string; palabrasClave: string[]; terminos: string[] }> = [
+  { id: 'cempasuchil', palabrasClave: ['cempasuchil', 'flor de muerto', 'flor'], terminos: ['cempasuchil', 'flor de muerto'] },
+  { id: 'pan', palabrasClave: ['pan', 'panes'], terminos: ['pan'] },
+  { id: 'vela', palabrasClave: ['vela', 'veladora', 'velas', 'veladoras', 'cirio', 'luz'], terminos: ['vela', 'veladora', 'cirio'] },
+  { id: 'incienso', palabrasClave: ['incienso', 'copal', 'sahumerio'], terminos: ['incienso', 'copal', 'sahumerio'] },
+  { id: 'fotografia', palabrasClave: ['foto', 'fotografia', 'fotos', 'retrato'], terminos: ['fotografia', 'foto', 'retrato'] },
+  { id: 'sal', palabrasClave: ['sal'], terminos: ['sal'] },
+  { id: 'agua', palabrasClave: ['agua'], terminos: ['agua'] },
+  { id: 'papel picado', palabrasClave: ['papel picado'], terminos: ['papel picado'] },
+  { id: 'calavera', palabrasClave: ['calavera', 'calaveras', 'calaverita'], terminos: ['calavera', 'calaverita'] },
+  { id: 'cruz', palabrasClave: ['cruz', 'cruces'], terminos: ['cruz'] },
+  { id: 'mole', palabrasClave: ['mole', 'pipian'], terminos: ['mole', 'pipian'] },
+  { id: 'atole', palabrasClave: ['atole', 'atoles'], terminos: ['atole'] },
+  { id: 'fruta', palabrasClave: ['fruta', 'frutas'], terminos: ['fruta'] },
+  { id: 'petate', palabrasClave: ['petate', 'petates'], terminos: ['petate'] },
+  { id: 'itacate', palabrasClave: ['itacate', 'itacates'], terminos: ['itacate'] },
 ];
 
 export function normalizar(texto: string): string {

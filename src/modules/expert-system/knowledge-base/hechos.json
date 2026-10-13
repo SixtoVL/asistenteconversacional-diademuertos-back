@@ -6,7 +6,7 @@
     "descripcion": "Las fechas que la Iglesia dedica a recordar a los muertos se han convertido en días de fiesta en el México mestizo; para los coras no tienen el mismo significado.",
     "categoria": "tradiciones",
     "ambito": "México (mestizo; con variaciones regionales)",
-    "fuentes": [{ "fuenteId": "F03", "paginas": "7-8" }],
+    "fuentes": [{ "fuenteId": "F03b", "paginas": "7-8" }],
     "estado": "verified"
   },
   {
@@ -16,7 +16,7 @@
     "descripcion": "Cuando las ánimas parten, los vivos aprovechan las viandas, frutos y comestibles que ya cumplieron su función ritual.",
     "categoria": "ofrendas",
     "ambito": "general",
-    "fuentes": [{ "fuenteId": "F03", "paginas": "2" }],
+    "fuentes": [{ "fuenteId": "F03a", "paginas": "2" }],
     "estado": "verified"
   },
   {
@@ -26,7 +26,10 @@
     "descripcion": "Su elaboración presupone conocimientos antiguos (cultivo, hornos); existen personas dedicadas exclusivamente a su preparación y en las ciudades se aparta tiempo de horno días antes del 1 y 2 de noviembre.",
     "categoria": "ofrendas",
     "ambito": "general (varía por región)",
-    "fuentes": [{ "fuenteId": "F03", "paginas": "2, 23-24" }],
+    "fuentes": [
+      { "fuenteId": "F03a", "paginas": "2" },
+      { "fuenteId": "F03e", "paginas": "23-24" }
+    ],
     "estado": "verified"
   },
   {
@@ -36,7 +39,7 @@
     "descripcion": "El homenaje consiste en depositar sobre el sepulcro objetos personales, comida y agua para asegurar su viaje al inframundo.",
     "categoria": "tradiciones",
     "ambito": "Nayarit: pueblo cora",
-    "fuentes": [{ "fuenteId": "F03", "paginas": "2" }],
+    "fuentes": [{ "fuenteId": "F03a", "paginas": "2" }],
     "estado": "verified"
   },
   {
@@ -46,7 +49,10 @@
     "descripcion": "La residencia final se concibe como un lugar de actividades cotidianas; año con año los muertos retornan y se les recibe con la casa adornada y ofrendas.",
     "categoria": "tradiciones",
     "ambito": "Puebla: Xayacatlán de Bravo (mixteca)",
-    "fuentes": [{ "fuenteId": "F03", "paginas": "2, 9-10" }],
+    "fuentes": [
+      { "fuenteId": "F03a", "paginas": "2" },
+      { "fuenteId": "F03b", "paginas": "9-10" }
+    ],
     "estado": "verified"
   },
   {
@@ -56,7 +62,7 @@
     "descripcion": "El chamán rezandero oficia con un altar de palos y agasajo (frutas, tamales, atole, entre otros); el 1 de noviembre también colocan las mismas viandas sobre las tumbas.",
     "categoria": "tradiciones",
     "ambito": "Nayarit: pueblo cora",
-    "fuentes": [{ "fuenteId": "F03", "paginas": "7" }],
+    "fuentes": [{ "fuenteId": "F03b", "paginas": "7" }],
     "estado": "verified"
   },
   {

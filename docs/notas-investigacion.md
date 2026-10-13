@@ -5,6 +5,7 @@
 - Se incorporan 8 documentos (F01–F08), el mínimo del objetivo MVP (8–15 según spec §4.3).
 - Cobertura temática: historia (F01, F02), ofrendas y elementos (F03, F04), variaciones regionales (F04, F05, F06), tradiciones y contexto (F07, F08).
 - `ofrendas-barro-pan-recuerdo.pdf` (F03) fue retirado temporalmente por codificación de texto rota y reincorporado con OCR rehecho (~36 MB; corpus total ~41 MB). El texto nuevo se verificó legible, con artefactos típicos a limpiar en extracción (guiones de fin de línea, `￾` sueltos).
+- El PDF de 36 MB se dividió después en 5 partes (`ofrendas-barro-pan-recuerdo-1-5.pdf`, `-6-10.pdf`, `-11-15.pdf`, `-16-20.pdf`, `-21-24.pdf`; 6-8 MB c/u) porque el tamaño original rompía el parseo externo; registradas como F03a–F03e. Los folios impresos se conservan en cada parte, así que las citas de páginas de los hechos no cambiaron (solo el `fuenteId`).
 - Metadatos de autor/institución/año completados para las 8 fuentes (F01, F02, F05, F08 aportados por investigación propia; F03, F04, F06, F07 extraídos de los PDF). Faltan: licencias de uso y título de revista de F06.
 - Los nombres originales tenían espacios, mayúsculas mixtas y caracteres con encoding dañado (`cempax�chitl`, `redistribuci�n`); se normalizaron a ASCII. Títulos originales conservados en `bibliografia.md`.
 

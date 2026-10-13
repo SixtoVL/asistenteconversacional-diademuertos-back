@@ -18,12 +18,48 @@
     "temas": ["historia"]
   },
   {
-    "id": "F03",
-    "titulo": "Barro, pan y recuerdo. Ofrendas a los muertos",
+    "id": "F03a",
+    "titulo": "Barro, pan y recuerdo. Ofrendas a los muertos (parte 1/5: portada, introd., coras época colonial; pp. 1-5)",
     "autor": "Efraín Cortés Ruiz, Jorge Gómez Poncet, Plácido Villanueva Peredo, Beatriz M. Oliver Vega",
     "anio": 1987,
     "publicacion": "Boletín INAH Antropología, Nueva época 15-16 (jul-oct), Museo Nacional de Antropología",
-    "archivo": "docs/fuentes/ofrendas-barro-pan-recuerdo.pdf",
+    "archivo": "docs/fuentes/ofrendas-barro-pan-recuerdo-1-5.pdf",
+    "temas": ["ofrendas", "tradiciones"]
+  },
+  {
+    "id": "F03b",
+    "titulo": "Barro, pan y recuerdo. Ofrendas a los muertos (parte 2/5: coras s. XIX-XX, correr al muerto, Xayacatlán inicio; pp. 6-10)",
+    "autor": "Efraín Cortés Ruiz, Jorge Gómez Poncet, Plácido Villanueva Peredo, Beatriz M. Oliver Vega",
+    "anio": 1987,
+    "publicacion": "Boletín INAH Antropología, Nueva época 15-16 (jul-oct), Museo Nacional de Antropología",
+    "archivo": "docs/fuentes/ofrendas-barro-pan-recuerdo-6-10.pdf",
+    "temas": ["ofrendas", "tradiciones"]
+  },
+  {
+    "id": "F03c",
+    "titulo": "Barro, pan y recuerdo. Ofrendas a los muertos (parte 3/5: Xayacatlán ofrendas, Huaquechula/Izúcar inicio; pp. 11-15)",
+    "autor": "Efraín Cortés Ruiz, Jorge Gómez Poncet, Plácido Villanueva Peredo, Beatriz M. Oliver Vega",
+    "anio": 1987,
+    "publicacion": "Boletín INAH Antropología, Nueva época 15-16 (jul-oct), Museo Nacional de Antropología",
+    "archivo": "docs/fuentes/ofrendas-barro-pan-recuerdo-11-15.pdf",
+    "temas": ["ofrendas", "tradiciones"]
+  },
+  {
+    "id": "F03d",
+    "titulo": "Barro, pan y recuerdo. Ofrendas a los muertos (parte 4/5: Izúcar/Huaquechula ceremonias y ofrendas; pp. 16-20)",
+    "autor": "Efraín Cortés Ruiz, Jorge Gómez Poncet, Plácido Villanueva Peredo, Beatriz M. Oliver Vega",
+    "anio": 1987,
+    "publicacion": "Boletín INAH Antropología, Nueva época 15-16 (jul-oct), Museo Nacional de Antropología",
+    "archivo": "docs/fuentes/ofrendas-barro-pan-recuerdo-16-20.pdf",
+    "temas": ["ofrendas", "tradiciones"]
+  },
+  {
+    "id": "F03e",
+    "titulo": "Barro, pan y recuerdo. Ofrendas a los muertos (parte 5/5: historia del trigo y pan de muerto; pp. 21-24 + bibliografía)",
+    "autor": "Efraín Cortés Ruiz, Jorge Gómez Poncet, Plácido Villanueva Peredo, Beatriz M. Oliver Vega",
+    "anio": 1987,
+    "publicacion": "Boletín INAH Antropología, Nueva época 15-16 (jul-oct), Museo Nacional de Antropología",
+    "archivo": "docs/fuentes/ofrendas-barro-pan-recuerdo-21-24.pdf",
     "temas": ["ofrendas", "tradiciones"]
   },
   {
