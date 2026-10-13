@@ -268,9 +268,18 @@ Gemini, OpenAI y Groq, con modelos gratuitos o de bajo costo como primera opció
 | `LLM_TIMEOUT_MS` | Timeout por llamada al proveedor | `15000` |
 | `CHAT_MAX_HISTORY` | Máximo de mensajes aceptados por petición | `20` |
 | `BODY_LIMIT` | Tamaño máximo del cuerpo JSON | `100kb` |
+| `LOG_LEVEL` | Nivel mínimo de log (`debug`, `info`, `warn`, `error`, `silent`) | `info` |
+| `LOG_PRETTY` | `true` = consola legible con objetos expandidos; `false` = JSON | `true` |
 
 - `config/env.ts` valida la presencia y formato al arrancar; si falta una clave de un proveedor habilitado, el servidor arranca pero ese proveedor queda deshabilitado y se registra en log.
 - Se proveerá `.env.example` versionado (sin valores reales). El `.env` real nunca se commitea.
+
+### 9.1 Trazabilidad del sistema experto (logs)
+
+- Cada `POST /api/chat` genera un `requestId` (8 chars) que correlaciona todas las líneas de la petición (`middlewares/request-logger.ts`).
+- El SE registra por consulta (`modules/expert-system/traza.ts`): pregunta completa, intención + datos, resolución de pregunta guiada si aplica, chequeo de cada regla (`matched`), regla disparada, hechos usados con cita y respuesta completa.
+- En consola se vuelca siempre: línea resumen en español + bloque `flujo SE` como JSON con formato (objetos expandidos vía `pino-pretty`).
+- En tests el logger está silenciado (`VITEST=true` → nivel `silent`).
 
 ---
 

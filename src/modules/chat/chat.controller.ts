@@ -1,6 +1,7 @@
 import type { NextFunction, Request, Response } from 'express';
 import { chatRequestSchema } from './chat.schemas.js';
 import { procesarChat } from './chat.service.js';
+import type { RequestConId } from '../../middlewares/request-logger.js';
 
 export async function postChat(req: Request, res: Response, next: NextFunction): Promise<void> {
   try {
@@ -22,7 +23,7 @@ export async function postChat(req: Request, res: Response, next: NextFunction):
       return;
     }
     // Modo clásico: el sistema experto responde con plantillas.
-    const resultado = await procesarChat(parsed.data);
+    const resultado = await procesarChat(parsed.data, (req as RequestConId).requestId);
     res.status(200).json(resultado);
   } catch (err) {
     next(err);

@@ -2,6 +2,7 @@ import { readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { z } from 'zod';
+import { logger } from '../../../config/logger.js';
 import { fuenteSchema, hechoSchema } from './kb.schemas.js';
 import type { Fuente, Hecho } from './kb.schemas.js';
 
@@ -47,7 +48,7 @@ export function loadKnowledgeBase(dir?: string): BaseConocimientos {
   }
 
   if (ignorados > 0) {
-    console.warn(`Base de conocimientos: ${ignorados} hecho(s) pendientes de revisión (no activos).`);
+    logger.warn(`Base de conocimientos: ${ignorados} hecho(s) pendientes de revisión (no activos).`);
   }
   return { fuentes, hechos: activos };
 }

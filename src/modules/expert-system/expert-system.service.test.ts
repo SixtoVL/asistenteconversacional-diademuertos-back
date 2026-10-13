@@ -1,6 +1,6 @@
 import { beforeAll, describe, expect, it } from 'vitest';
 import { loadKnowledgeBase } from './knowledge-base/knowledge-base.js';
-import { consultar, inicializarSistemaExperto } from './expert-system.service.js';
+import { consultar, crearTraza, detalleTraza, inicializarSistemaExperto, narrarTraza, resumirTraza } from './expert-system.service.js';
 import { evaluar } from './inference-engine/engine.js';
 import { REGLAS } from './rules/rules.js';
 import type { Hecho } from './knowledge-base/kb.schemas.js';
@@ -101,11 +101,29 @@ describe('consultar (KB real)', () => {
       hechoTradicion('HS1', 'Puebla: valle de Texmelucan'),
       hechoTradicion('HS2', 'Campeche: Pomuch (maya)'),
     ];
-    const conclusion = evaluar(
+    const { conclusion } = evaluar(
       { intencionId: 'tradicion', datos: {} },
       sinteticos,
       REGLAS,
     );
     expect(conclusion.tipo).toBe('pregunta_guiada');
+  });
+
+  it('la traza registra intención, regla y hechos sin alterar la respuesta', () => {
+    const traza = crearTraza('¿Qué significa la sal?');
+    const result = consultar('¿Qué significa la sal?', [], traza);
+    expect(result.type).toBe('texto');
+    expect(traza.intencionId).toBe('significado_elemento');
+    expect(traza.reglaId).toBe('R-responder-hechos');
+    expect(traza.hechos.map((h) => h.id)).toContain('H018');
+    expect(traza.chequeos.length).toBeGreaterThan(0);
+    expect(resumirTraza(traza)).toContain('H018');
+    const detalle = detalleTraza(traza) as { regla: string; descartadas: string[] };
+    expect(detalle.regla).toContain('R-responder-hechos');
+    expect(detalle.descartadas).toContain('R-saludo');
+    const narrativa = narrarTraza(traza).join('\n');
+    expect(narrativa).toContain('intents/intents.ts::interpretar');
+    expect(narrativa).toContain('R-responder-hechos.cuando => ✓');
+    expect(narrativa).toContain('plantillas.ts::renderConclusion');
   });
 });

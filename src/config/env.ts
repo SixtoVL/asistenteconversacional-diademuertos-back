@@ -23,4 +23,6 @@ export const env = {
   FRONTEND_ORIGIN: getEnv('FRONTEND_ORIGIN', 'http://localhost:5173'),
   BODY_LIMIT: getEnv('BODY_LIMIT', '100kb'),
   CHAT_MAX_HISTORY: getNumberEnv('CHAT_MAX_HISTORY', 20),
+  LOG_LEVEL: getEnv('LOG_LEVEL', 'info'),
+  LOG_PRETTY: getEnv('LOG_PRETTY', 'true') === 'true',
 } as const;

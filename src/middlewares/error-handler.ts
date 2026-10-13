@@ -1,4 +1,6 @@
 import type { NextFunction, Request, Response } from 'express';
+import { childLogger } from '../config/logger.js';
+import type { RequestConId } from './request-logger.js';
 
 export interface ApiErrorBody {
   type: 'error';
@@ -18,11 +20,11 @@ export function notFoundHandler(_req: Request, res: Response): void {
 
 export function errorHandler(
   err: unknown,
-  _req: Request,
+  req: Request,
   res: Response,
   _next: NextFunction,
 ): void {
-  console.error('Error no manejado:', err);
+  childLogger((req as RequestConId).requestId ?? 'sin-id').error({ err }, 'Error no manejado');
   res.status(500).json({
     type: 'error',
     codigo: 'error_interno',

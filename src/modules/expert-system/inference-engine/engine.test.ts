@@ -23,13 +23,16 @@ describe('evaluar', () => {
       { id: 'baja', descripcion: '', prioridad: 20, cuando: () => true, entonces: () => ({ tipo: 'error', codigo: 'datos_insuficientes' }) },
       { id: 'alta', descripcion: '', prioridad: 10, cuando: () => true, entonces: () => ({ tipo: 'texto', introduccion: 'hola', hechos: [] }) },
     ];
-    const conclusion = evaluar({ intencionId: 'saludo', datos: {} }, [], reglas);
+    const { conclusion, reglaId } = evaluar({ intencionId: 'saludo', datos: {} }, [], reglas);
     expect(conclusion.tipo).toBe('texto');
+    expect(reglaId).toBe('alta');
   });
 
   it('devuelve consulta_no_reconocida sin reglas que matcheen', () => {
-    const conclusion = evaluar({ intencionId: null, datos: {} }, [], []);
+    const { conclusion, reglaId, chequeos } = evaluar({ intencionId: null, datos: {} }, [], []);
     expect(conclusion).toEqual({ tipo: 'error', codigo: 'consulta_no_reconocida' });
+    expect(reglaId).toBeNull();
+    expect(chequeos).toEqual([]);
   });
 });
 

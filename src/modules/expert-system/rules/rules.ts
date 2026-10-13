@@ -3,6 +3,7 @@ import type { Caso, Conclusion, Regla } from '../inference-engine/engine.js';
 import type { Hecho } from '../knowledge-base/kb.schemas.js';
 import { ELEMENTOS, REGIONES, buscarIntencion } from '../intents/intents.js';
 import { buscarPreguntaGuiada } from '../dialogo.js';
+import type { TrazaConsulta } from '../traza.js';
 
 function terminosDeIntencion(intencionId: string, datos: Record<string, string>): string[] {
   const intencion = buscarIntencion(intencionId);
@@ -24,25 +25,25 @@ function esInformativa(intencionId: string | null): boolean {
   );
 }
 
-function buscarParaCaso(caso: Caso, hechos: Hecho[], limite = 3): Hecho[] {
+function buscarParaCaso(caso: Caso, hechos: Hecho[], limite = 3, traza?: TrazaConsulta): Hecho[] {
   if (!caso.intencionId) {
     return [];
   }
   return buscarHechos(hechos, terminosDeIntencion(caso.intencionId, caso.datos), {
     region: caso.datos['region'],
     limite,
-  });
+  }, traza);
 }
 
 const REGIONES_ACOTABLES = ['puebla', 'campeche', 'nayarit', 'yucatan'];
 
-function regionesConHechos(caso: Caso, hechos: Hecho[]): string[] {
+function regionesConHechos(caso: Caso, hechos: Hecho[], traza?: TrazaConsulta): string[] {
   if (!caso.intencionId) {
     return [];
   }
   const terminos = terminosDeIntencion(caso.intencionId, caso.datos);
   return REGIONES_ACOTABLES.filter(
-    (region) => buscarHechos(hechos, terminos, { region, limite: 1 }).length > 0,
+    (region) => buscarHechos(hechos, terminos, { region, limite: 1 }, traza).length > 0,
   );
 }
 
@@ -89,13 +90,13 @@ export const REGLAS: Regla[] = [
     id: 'R-recomendar-con-region',
     descripcion: 'Recomienda elementos de ofrenda solo con hechos de esa región.',
     prioridad: 40,
-    cuando: (caso, hechos) =>
+    cuando: (caso, hechos, traza) =>
       caso.intencionId === 'recomendar' &&
       !!caso.datos['region'] &&
-      buscarHechos(hechos, ['ofrenda'], { region: caso.datos['region'], limite: 4 }).length > 0,
-    entonces: (caso, hechos): Conclusion => {
+      buscarHechos(hechos, ['ofrenda'], { region: caso.datos['region'], limite: 4 }, traza).length > 0,
+    entonces: (caso, hechos, traza): Conclusion => {
       const region = caso.datos['region'] ?? 'general';
-      const encontrados = buscarHechos(hechos, ['ofrenda'], { region, limite: 4 });
+      const encontrados = buscarHechos(hechos, ['ofrenda'], { region, limite: 4 }, traza);
       const etiqueta =
         REGIONES.find((item) => item.id === region)?.etiqueta ?? 'General';
       return {
@@ -125,10 +126,10 @@ export const REGLAS: Regla[] = [
     id: 'R-tradicion-sin-region',
     descripcion: 'Si preguntan por tradiciones sin región y hay hechos de varias regiones, pide la región.',
     prioridad: 46,
-    cuando: (caso, hechos) =>
+    cuando: (caso, hechos, traza) =>
       caso.intencionId === 'tradicion' &&
       !caso.datos['region'] &&
-      regionesConHechos(caso, hechos).length >= 2,
+      regionesConHechos(caso, hechos, traza).length >= 2,
     entonces: (): Conclusion => {
       const pregunta = buscarPreguntaGuiada('region-tradicion');
       return {
@@ -142,12 +143,12 @@ export const REGLAS: Regla[] = [
     id: 'R-responder-hechos',
     descripcion: 'Responde consultas informativas con hechos verificados de la base.',
     prioridad: 50,
-    cuando: (caso, hechos) =>
-      esInformativa(caso.intencionId) && buscarParaCaso(caso, hechos).length > 0,
-    entonces: (caso, hechos): Conclusion => ({
+    cuando: (caso, hechos, traza) =>
+      esInformativa(caso.intencionId) && buscarParaCaso(caso, hechos, 3, traza).length > 0,
+    entonces: (caso, hechos, traza): Conclusion => ({
       tipo: 'texto',
       introduccion: 'Esto es lo que sé al respecto:',
-      hechos: buscarParaCaso(caso, hechos),
+      hechos: buscarParaCaso(caso, hechos, 3, traza),
     }),
   },
   {
