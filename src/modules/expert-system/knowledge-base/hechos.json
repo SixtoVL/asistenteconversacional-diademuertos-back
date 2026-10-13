@@ -1,0 +1,162 @@
+[
+  {
+    "id": "H001",
+    "tema": "Fechas centrales de la celebración",
+    "afirmacion": "En el México mestizo, los días centrales del Día de Muertos son el 1 y 2 de noviembre.",
+    "descripcion": "Las fechas que la Iglesia dedica a recordar a los muertos se han convertido en días de fiesta en el México mestizo; para los coras no tienen el mismo significado.",
+    "categoria": "tradiciones",
+    "ambito": "México (mestizo; con variaciones regionales)",
+    "fuentes": [{ "fuenteId": "F03", "paginas": "7-8" }],
+    "estado": "verified"
+  },
+  {
+    "id": "H002",
+    "tema": "Las ánimas y los aromas de la ofrenda",
+    "afirmacion": "Se cree que las ánimas regresan a degustar el olor de los alimentos, el humo del copal y el perfume de las flores.",
+    "descripcion": "Cuando las ánimas parten, los vivos aprovechan las viandas, frutos y comestibles que ya cumplieron su función ritual.",
+    "categoria": "ofrendas",
+    "ambito": "general",
+    "fuentes": [{ "fuenteId": "F03", "paginas": "2" }],
+    "estado": "verified"
+  },
+  {
+    "id": "H003",
+    "tema": "Pan de muerto",
+    "afirmacion": "El pan de muerto se elabora solo para esta época, con variedad de formas y decoraciones, teniendo al trigo como elemento básico.",
+    "descripcion": "Su elaboración presupone conocimientos antiguos (cultivo, hornos); existen personas dedicadas exclusivamente a su preparación y en las ciudades se aparta tiempo de horno días antes del 1 y 2 de noviembre.",
+    "categoria": "ofrendas",
+    "ambito": "general (varía por región)",
+    "fuentes": [{ "fuenteId": "F03", "paginas": "2, 23-24" }],
+    "estado": "verified"
+  },
+  {
+    "id": "H004",
+    "tema": "Dualidad cuerpo-alma en el pueblo cora",
+    "afirmacion": "Para los coras, el hombre es una entidad dual —cuerpo y alma— y al morir su espíritu permanece cerca de su casa para recibir el homenaje póstumo.",
+    "descripcion": "El homenaje consiste en depositar sobre el sepulcro objetos personales, comida y agua para asegurar su viaje al inframundo.",
+    "categoria": "tradiciones",
+    "ambito": "Nayarit: pueblo cora",
+    "fuentes": [{ "fuenteId": "F03", "paginas": "2" }],
+    "estado": "verified"
+  },
+  {
+    "id": "H005",
+    "tema": "El viaje del alma al inframundo (Xayacatlán)",
+    "afirmacion": "En Xayacatlán de Bravo se cree que el alma viaja al inframundo guiada por un tecolote, por un camino lleno de peligros.",
+    "descripcion": "La residencia final se concibe como un lugar de actividades cotidianas; año con año los muertos retornan y se les recibe con la casa adornada y ofrendas.",
+    "categoria": "tradiciones",
+    "ambito": "Puebla: Xayacatlán de Bravo (mixteca)",
+    "fuentes": [{ "fuenteId": "F03", "paginas": "2, 9-10" }],
+    "estado": "verified"
+  },
+  {
+    "id": "H006",
+    "tema": "Ceremonia de correr al muerto (coras)",
+    "afirmacion": "A los cinco días del entierro, los coras celebran la ceremonia de correr al muerto para despedir al alma y evitar que regrese a molestar a los vivos.",
+    "descripcion": "El chamán rezandero oficia con un altar de palos y agasajo (frutas, tamales, atole, entre otros); el 1 de noviembre también colocan las mismas viandas sobre las tumbas.",
+    "categoria": "tradiciones",
+    "ambito": "Nayarit: pueblo cora",
+    "fuentes": [{ "fuenteId": "F03", "paginas": "7" }],
+    "estado": "verified"
+  },
+  {
+    "id": "H007",
+    "tema": "Ciclo fúnebre de tres momentos (Texmelucan)",
+    "afirmacion": "En el valle de Texmelucan el ciclo fúnebre contempla tres momentos: los rituales propios del difunto, la primera ofrenda y el ritual al cabo de un año.",
+    "descripcion": "La primera ofrenda se realiza cuando la persona muere antes de julio o de tres a seis meses antes de noviembre del año en curso.",
+    "categoria": "tradiciones",
+    "ambito": "Puebla: valle de Texmelucan",
+    "fuentes": [{ "fuenteId": "F04", "paginas": "71" }],
+    "estado": "verified"
+  },
+  {
+    "id": "H008",
+    "tema": "Calendario de ofrendas (Texmelucan)",
+    "afirmacion": "Las ofrendas se colocan desde el 28 de octubre (muertes de accidente), el 31 (niños) y el 1 de noviembre (adultos); el 2 se despide a las ánimas.",
+    "descripcion": "El ambiente festivo inicia el 31 con la llegada de los angelitos; la ofrenda se levanta a partir del 3 o 4 de noviembre.",
+    "categoria": "tradiciones",
+    "ambito": "Puebla: valle de Texmelucan",
+    "fuentes": [{ "fuenteId": "F04", "paginas": "72-74" }],
+    "estado": "verified"
+  },
+  {
+    "id": "H009",
+    "tema": "Ofrenda en forma de escalera (Texmelucan)",
+    "afirmacion": "La ofrenda se coloca en forma de escalera de cinco a siete peldaños: en lo alto la imagen religiosa, luego la fotografía del difunto y angelitos, y desde el tercero comida y ropa.",
+    "descripcion": "Se puede dejar un escalón vacío para quienes lleven fruta o pan; la disposición busca alimentar y vestir al difunto para su viaje.",
+    "categoria": "ofrendas",
+    "ambito": "Puebla: valle de Texmelucan",
+    "fuentes": [{ "fuenteId": "F04", "paginas": "72" }],
+    "estado": "verified"
+  },
+  {
+    "id": "H010",
+    "tema": "Colores según edad y estado civil (Texmelucan)",
+    "afirmacion": "Para niños y personas solteras se emplean blanco, azul cielo y naranja; para adultos, naranja y negro en los adornos.",
+    "descripcion": "La entrada de la casa se decora con arco de cempasúchil u otates con tiras naranja, blanco o negro según el estado civil del fallecido.",
+    "categoria": "simbolos",
+    "ambito": "Puebla: valle de Texmelucan",
+    "fuentes": [{ "fuenteId": "F04", "paginas": "73" }],
+    "estado": "verified"
+  },
+  {
+    "id": "H011",
+    "tema": "Camino de flores e incienso (Texmelucan)",
+    "afirmacion": "Un camino de flores de cempasúchil sale de la casa rumbo al panteón para indicar el camino, con sahumerio de incienso para recibir y despedir a las ánimas.",
+    "descripcion": "Del 28 al 1 de noviembre se recibe a las 12:00 con incienso y flores; al despedir el 2 también se echa incienso para sacralizar.",
+    "categoria": "simbolos",
+    "ambito": "Puebla: valle de Texmelucan",
+    "fuentes": [{ "fuenteId": "F04", "paginas": "72-73" }],
+    "estado": "verified"
+  },
+  {
+    "id": "H012",
+    "tema": "Cuatro momentos rituales (Canoa)",
+    "afirmacion": "En San Miguel Canoa el Día de Muertos integra cuatro momentos: construcción de ofrendas, iluminada en el panteón, recorrido del Santo Ánimas y redistribución de bienes en canastas.",
+    "descripcion": "El sustento estructural del sistema ritual es creer que los muertos regresan a visitar a sus familiares.",
+    "categoria": "tradiciones",
+    "ambito": "Puebla: San Miguel Canoa",
+    "fuentes": [{ "fuenteId": "F06", "paginas": "209" }],
+    "estado": "verified"
+  },
+  {
+    "id": "H013",
+    "tema": "Redistribución de canastas (Canoa)",
+    "afirmacion": "Desde el mediodía del 2 de noviembre se reparten canastas adornadas con bienes ofrendados a parientes, padrinos y amigos.",
+    "descripcion": "Cada familia elabora entre seis y diez canastas; la práctica refuerza parentesco y alianzas y su carácter es social.",
+    "categoria": "tradiciones",
+    "ambito": "Puebla: San Miguel Canoa",
+    "fuentes": [{ "fuenteId": "F06", "paginas": "211-212" }],
+    "estado": "verified"
+  },
+  {
+    "id": "H014",
+    "tema": "Elementos de la ofrenda (Canoa)",
+    "afirmacion": "La ofrenda incluye un camino de ocoxal y flor de muerto, velas, copal y manjares cuyo aroma disfrutan las ánimas.",
+    "descripcion": "Conforme se coloca cada cosa se enuncia el nombre del muerto y nada debe tocarse hasta levantar la ofrenda.",
+    "categoria": "ofrendas",
+    "ambito": "Puebla: San Miguel Canoa",
+    "fuentes": [{ "fuenteId": "F06", "paginas": "210" }],
+    "estado": "verified"
+  },
+  {
+    "id": "H015",
+    "tema": "Limpieza de huesos (Pomuch)",
+    "afirmacion": "En Pomuch los restos se exhuman (por lo regular al tercer año), se depositan en osarios y cada octubre los deudos los limpian y cambian de paño.",
+    "descripcion": "La práctica fue patrimonializada por Campeche en 2017 y es motivo del festival anual Pomuch para el Mundo.",
+    "categoria": "tradiciones",
+    "ambito": "Campeche: Pomuch (maya)",
+    "fuentes": [{ "fuenteId": "F07", "paginas": "187-188" }],
+    "estado": "verified"
+  },
+  {
+    "id": "H016",
+    "tema": "Reconocimiento UNESCO",
+    "afirmacion": "Las fiestas indígenas dedicadas a los muertos fueron postuladas por México en 2003 e inscritas por la UNESCO en 2008.",
+    "descripcion": "Conaculta postuló en 2001 destacando el origen indígena, los elementos católicos y la práctica común nacional; en 2008 se inscribió en la lista representativa.",
+    "categoria": "historia",
+    "ambito": "México (UNESCO, patrimonio inmaterial)",
+    "fuentes": [{ "fuenteId": "F07", "paginas": "191-192" }],
+    "estado": "verified"
+  }
+]

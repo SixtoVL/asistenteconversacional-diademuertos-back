@@ -1,5 +1,6 @@
 import type { NextFunction, Request, Response } from 'express';
 import { chatRequestSchema } from './chat.schemas.js';
+import { procesarChat } from './chat.service.js';
 
 export async function postChat(req: Request, res: Response, next: NextFunction): Promise<void> {
   try {
@@ -20,13 +21,9 @@ export async function postChat(req: Request, res: Response, next: NextFunction):
       });
       return;
     }
-    // TODO (Fase 1): delegar en procesarChat() cuando el sistema experto exista.
-    // Por ahora el endpoint existe pero responde "no implementado".
-    res.status(501).json({
-      type: 'error',
-      codigo: 'error_interno',
-      mensaje: 'El chat de fase 1 aún no está implementado.',
-    });
+    // Modo clásico: el sistema experto responde con plantillas.
+    const resultado = await procesarChat(parsed.data);
+    res.status(200).json(resultado);
   } catch (err) {
     next(err);
   }

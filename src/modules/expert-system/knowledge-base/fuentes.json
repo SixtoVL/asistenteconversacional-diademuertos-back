@@ -1,0 +1,74 @@
+[
+  {
+    "id": "F01",
+    "titulo": "Día de Muertos - Del Miccailhuitontli a Todos los Santos",
+    "autor": "Secretaría de Cultura, Gobierno de México",
+    "anio": 2019,
+    "publicacion": "gob.mx/cultura (artículo, 1 nov 2019)",
+    "archivo": "docs/fuentes/historia-miccailhuitontli-todos-santos.pdf",
+    "temas": ["historia"]
+  },
+  {
+    "id": "F02",
+    "titulo": "Día de Muertos - Celebración Fundamental",
+    "autor": "Secretaría de Cultura, Gobierno de México",
+    "anio": 2014,
+    "publicacion": "gob.mx/cultura (nota de prensa, 31 oct 2014)",
+    "archivo": "docs/fuentes/dia-muertos-celebracion-fundamental.pdf",
+    "temas": ["historia"]
+  },
+  {
+    "id": "F03",
+    "titulo": "Barro, pan y recuerdo. Ofrendas a los muertos",
+    "autor": "Efraín Cortés Ruiz, Jorge Gómez Poncet, Plácido Villanueva Peredo, Beatriz M. Oliver Vega",
+    "anio": 1987,
+    "publicacion": "Boletín INAH Antropología, Nueva época 15-16 (jul-oct), Museo Nacional de Antropología",
+    "archivo": "docs/fuentes/ofrendas-barro-pan-recuerdo.pdf",
+    "temas": ["ofrendas", "tradiciones"]
+  },
+  {
+    "id": "F04",
+    "titulo": "Incienso, cempasúchil y velas. Las ofrendas de Día de Muertos en el valle de Texmelucan, Puebla",
+    "autor": "Alma Delia Flores Delgado",
+    "anio": 2019,
+    "publicacion": "Vita Brevis año 8 núm. 14 (ene-jun), BUAP",
+    "archivo": "docs/fuentes/ofrendas-texmelucan-incienso-cempasuchil-velas.pdf",
+    "temas": ["ofrendas", "tradiciones"]
+  },
+  {
+    "id": "F05",
+    "titulo": "Comparten la tradición de la ofrenda Hanal Pixán en altar maya en el Museo Nacional de Culturas Populares",
+    "autor": "Secretaría de Cultura, Gobierno de México",
+    "anio": 2016,
+    "publicacion": "gob.mx/cultura (nota de prensa, 26 oct 2016)",
+    "archivo": "docs/fuentes/ofrenda-hanal-pixan-museo-culturas-populares.pdf",
+    "temas": ["tradiciones"]
+  },
+  {
+    "id": "F06",
+    "titulo": "Territorio y redistribución de bienes ofrendados el Día de Muertos en San Miguel Canoa, Puebla",
+    "autor": "Ernesto Licona Valencia, Ana Isabel Castillo Espinosa, Anna Sophie Brietzke",
+    "anio": 2017,
+    "publicacion": "núm. 69 (may-ago), Colegio de Antropología Social, BUAP",
+    "archivo": "docs/fuentes/bienes-ofrendados-san-miguel-canoa.pdf",
+    "temas": ["tradiciones"]
+  },
+  {
+    "id": "F07",
+    "titulo": "Entre festivales y huesos: la politización de los rituales mortuorios en México",
+    "autor": "María Fernanda Apipilhuasco Miranda",
+    "anio": 2025,
+    "publicacion": "Península vol. XX núm. 2 (jul-dic), CEPHCIS-UNAM, pp. 185-212",
+    "archivo": "docs/fuentes/politizacion-rituales-mortuorios-mexico.pdf",
+    "temas": ["historia", "tradiciones"]
+  },
+  {
+    "id": "F08",
+    "titulo": "De muertos y tragones están llenos los panteones",
+    "autor": "Secretaría de Cultura, Gobierno de México",
+    "anio": 2017,
+    "publicacion": "gob.mx/cultura (artículo, 31 oct 2017)",
+    "archivo": "docs/fuentes/panteones-muertos-tragones.pdf",
+    "temas": ["tradiciones"]
+  }
+]
