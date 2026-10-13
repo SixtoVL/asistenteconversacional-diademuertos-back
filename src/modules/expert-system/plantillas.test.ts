@@ -49,6 +49,7 @@ describe('renderConclusion', () => {
     expect(result.type).toBe('resultado_se');
     if (result.type === 'resultado_se') {
       expect(result.justificacion).toContain('F01');
+      expect(result.fuentes).toHaveLength(1);
     }
   });
 

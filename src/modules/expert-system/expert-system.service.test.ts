@@ -73,13 +73,9 @@ describe('consultar (KB real)', () => {
     }
   });
 
-  it('informa carencia honesta ante elemento sin hechos (calavera)', () => {
+  it('responde sobre la calavera gracias al lote 2 (antes: carencia honesta)', () => {
     const result = consultar('¿Qué significa la calavera?');
-    expect(result).toEqual({
-      type: 'error',
-      codigo: 'datos_insuficientes',
-      mensaje: expect.any(String),
-    });
+    expect(result.type).toBe('texto');
   });
 
   it('resuelve la región respondida a la pregunta guiada (historial)', () => {
@@ -94,6 +90,18 @@ describe('consultar (KB real)', () => {
   it('responde sobre el hanal pixán con hechos de Yucatán (lote 1)', () => {
     const result = consultar('¿Qué es el hanal pixán?');
     expect(result.type).toBe('texto');
+  });
+
+  it('responde sobre calaveritas y papel picado, y acota xantolo por región (lote 2)', () => {
+    const calavera = consultar('¿Qué significan las calaveritas de azúcar?');
+    expect(calavera.type).toBe('texto');
+    const papel = consultar('¿Qué significa el papel picado?');
+    expect(papel.type).toBe('texto');
+    const xantolo = consultar('háblame del xantolo');
+    expect(xantolo.type).toBe('pregunta_guiada');
+    if (xantolo.type === 'pregunta_guiada') {
+      expect(xantolo.texto).toContain('región');
+    }
   });
 
   it('pregunta la región ante tradiciones de varias regiones (reglas + sintéticos)', () => {

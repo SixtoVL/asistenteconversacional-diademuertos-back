@@ -17,7 +17,7 @@ export interface FuenteRef {
 export type ChatResponse =
   | { type: 'texto'; texto: string; fuentes?: FuenteRef[] }
   | { type: 'pregunta_guiada'; texto: string; opciones: Array<{ id: string; etiqueta: string }> }
-  | { type: 'resultado_se'; titulo: string; detalle: string; justificacion: string }
+  | { type: 'resultado_se'; titulo: string; detalle: string; justificacion: string; fuentes: FuenteRef[] }
   | { type: 'error'; codigo: ErrorCodigo; mensaje: string };
 
 const MENSAJES_ERROR: Record<'consulta_no_reconocida' | 'datos_insuficientes', string> = {
@@ -71,6 +71,7 @@ export function renderConclusion(conclusion: Conclusion, fuentes: Fuente[]): Cha
         titulo: conclusion.titulo,
         detalle: conclusion.detalle,
         justificacion: justificacionFuentes(conclusion.hechos, fuentes),
+        fuentes: fuentesUnicas(conclusion.hechos, fuentes),
       };
     case 'error':
       return { type: 'error', codigo: conclusion.codigo, mensaje: MENSAJES_ERROR[conclusion.codigo] };

@@ -194,5 +194,35 @@
     "ambito": "Yucatán: pueblo maya",
     "fuentes": [{ "fuenteId": "F05", "paginas": "2" }],
     "estado": "verified"
+  },
+  {
+    "id": "H020",
+    "tema": "Tradiciones regionales del Día de Muertos",
+    "afirmacion": "La velación simbólica a pie de tumba es propia de Oaxaca, Michoacán y la Ciudad de México; la apertura de criptas para el aseo de restos, de Yucatán y Chiapas; los senderos de aserrín multicolor para guiar a las almas, de Tlaxcala; y los adornos con hojas de plátano, piñas y papel picado, del Istmo de Tehuantepec, Chiapas y Tabasco.",
+    "descripcion": "En cada estado y lugar hay una tradición distinta según su contexto; son esas particularidades regionales las que dan riqueza a una de las festividades más representativas de México.",
+    "categoria": "tradiciones",
+    "ambito": "México (Oaxaca, Michoacán, CDMX, Yucatán, Chiapas, Tlaxcala, Tabasco)",
+    "fuentes": [{ "fuenteId": "F08", "paginas": "1" }],
+    "estado": "verified"
+  },
+  {
+    "id": "H021",
+    "tema": "Pan de muerto por región",
+    "afirmacion": "En la Ciudad de México y estados aledaños el pan de muerto lleva incrustaciones en forma de huesos adornados con azúcar; en Guerrero luce con el nombre de los muertos que se espera recibir; en la Huasteca la celebración se conoce como Xantolo.",
+    "descripcion": "La celebración, tradición viva en la Huasteca, se conoce ahí como Xantolo; en cada región el pan adopta formas y decoraciones propias.",
+    "categoria": "ofrendas",
+    "ambito": "México (CDMX, Guerrero, Huasteca)",
+    "fuentes": [{ "fuenteId": "F08", "paginas": "1" }],
+    "estado": "verified"
+  },
+  {
+    "id": "H022",
+    "tema": "Calaveritas de azúcar",
+    "afirmacion": "Las calaveritas de azúcar provienen de las culturas mesoamericanas, para quienes la muerte era solo la conclusión de una etapa de vida que se extendía a otro nivel y era común conservar cráneos y mostrarlos durante los rituales; las calaveras en verso a manera de crítica se popularizaron en la segunda mitad del siglo XIX con grabadores como Gabriel Vicente Gaona, Manuel Manilla y muy especialmente José Guadalupe Posada.",
+    "descripcion": "Ninguna ofrenda estaría completa sin las tradicionales calaveritas; a la llegada de los españoles los rituales contra la fe católica fueron prohibidos y, ante la resistencia indígena, sustituidos por otros.",
+    "categoria": "simbolos",
+    "ambito": "México (general)",
+    "fuentes": [{ "fuenteId": "F08", "paginas": "2" }],
+    "estado": "verified"
   }
 ]

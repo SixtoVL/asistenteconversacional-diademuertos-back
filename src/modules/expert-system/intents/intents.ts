@@ -40,7 +40,7 @@ export const INTENCIONES: Intencion[] = [
   },
   {
     id: 'significado_elemento',
-    palabrasClave: ['significa', 'significado', 'que es', 'cempasuchil', 'flor', 'flores', 'pan', 'panes', 'vela', 'veladora', 'velas', 'veladoras', 'incienso', 'copal', 'foto', 'fotografia', 'fotos', 'retrato', 'altar', 'ofrenda', 'elemento', 'elementos', 'papel picado', 'calavera', 'calaveras', 'calaverita', 'cruz', 'cruces', 'agua', 'sal', 'mole', 'atole', 'atoles', 'fruta', 'frutas', 'itacate', 'itacates', 'petate', 'petates'],
+    palabrasClave: ['significa', 'significan', 'significado', 'que es', 'cempasuchil', 'flor', 'flores', 'pan', 'panes', 'vela', 'veladora', 'velas', 'veladoras', 'incienso', 'copal', 'foto', 'fotografia', 'fotos', 'retrato', 'altar', 'ofrenda', 'elemento', 'elementos', 'papel picado', 'calavera', 'calaveras', 'calaverita', 'calaveritas', 'cruz', 'cruces', 'agua', 'sal', 'mole', 'atole', 'atoles', 'fruta', 'frutas', 'itacate', 'itacates', 'petate', 'petates'],
     terminosBusqueda: [],
     prioridad: 40,
   },
@@ -58,7 +58,7 @@ export const INTENCIONES: Intencion[] = [
   },
   {
     id: 'tradicion',
-    palabrasClave: ['muerte', 'muertos', 'difunto', 'difuntos', 'tradicion', 'tradiciones', 'cora', 'coras', 'canasta', 'canastas', 'huesos', 'pomuch', 'hanal', 'pixan', 'mukbil', 'ritual', 'costumbre', 'panteon', 'angelitos', 'tecolote', 'inframundo', 'animas', 'alma', 'velacion'],
+    palabrasClave: ['muerte', 'muertos', 'difunto', 'difuntos', 'tradicion', 'tradiciones', 'cora', 'coras', 'canasta', 'canastas', 'huesos', 'pomuch', 'hanal', 'pixan', 'mukbil', 'xantolo', 'ritual', 'costumbre', 'panteon', 'angelitos', 'tecolote', 'inframundo', 'animas', 'alma', 'velacion'],
     terminosBusqueda: ['tradicion', 'ritual', 'costumbre'],
     prioridad: 70,
   },
@@ -98,7 +98,7 @@ export const ELEMENTOS: Array<{ id: string; palabrasClave: string[]; terminos: s
   { id: 'sal', palabrasClave: ['sal'], terminos: ['sal'] },
   { id: 'agua', palabrasClave: ['agua'], terminos: ['agua'] },
   { id: 'papel picado', palabrasClave: ['papel picado'], terminos: ['papel picado'] },
-  { id: 'calavera', palabrasClave: ['calavera', 'calaveras', 'calaverita'], terminos: ['calavera', 'calaverita'] },
+  { id: 'calavera', palabrasClave: ['calavera', 'calaveras', 'calaverita', 'calaveritas'], terminos: ['calavera', 'calaverita'] },
   { id: 'cruz', palabrasClave: ['cruz', 'cruces'], terminos: ['cruz'] },
   { id: 'mole', palabrasClave: ['mole', 'pipian'], terminos: ['mole', 'pipian'] },
   { id: 'atole', palabrasClave: ['atole', 'atoles'], terminos: ['atole'] },
