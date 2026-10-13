@@ -34,7 +34,7 @@ function buscarParaCaso(caso: Caso, hechos: Hecho[], limite = 3): Hecho[] {
   });
 }
 
-const REGIONES_ACOTABLES = ['puebla', 'campeche', 'nayarit'];
+const REGIONES_ACOTABLES = ['puebla', 'campeche', 'nayarit', 'yucatan'];
 
 function regionesConHechos(caso: Caso, hechos: Hecho[]): string[] {
   if (!caso.intencionId) {

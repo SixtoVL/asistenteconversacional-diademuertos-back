@@ -32,7 +32,7 @@ describe('consultar (KB real)', () => {
     const result = consultar('quiero preparar una ofrenda');
     expect(result.type).toBe('pregunta_guiada');
     if (result.type === 'pregunta_guiada') {
-      expect(result.opciones.length).toBe(4);
+      expect(result.opciones.length).toBe(5);
     }
   });
 
@@ -58,9 +58,9 @@ describe('consultar (KB real)', () => {
     });
   });
 
-  it('responde distinto para sal y agua (sin falsos por subcadena)', () => {
+  it('responde sobre la sal gracias al lote 1 (antes: carencia honesta)', () => {
     const sal = consultar('¿Qué significa la sal?');
-    expect(sal.type).toBe('error');
+    expect(sal.type).toBe('texto');
     const agua = consultar('¿Qué significa el agua?');
     expect(agua.type).toBe('texto');
   });
@@ -89,6 +89,11 @@ describe('consultar (KB real)', () => {
     ];
     const result = consultar('Puebla', historial);
     expect(result.type).toBe('resultado_se');
+  });
+
+  it('responde sobre el hanal pixán con hechos de Yucatán (lote 1)', () => {
+    const result = consultar('¿Qué es el hanal pixán?');
+    expect(result.type).toBe('texto');
   });
 
   it('pregunta la región ante tradiciones de varias regiones (reglas + sintéticos)', () => {

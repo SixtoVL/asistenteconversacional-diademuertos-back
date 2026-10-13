@@ -77,5 +77,7 @@ describe('coincideRegion', () => {
     expect(coincideRegion('Puebla: San Miguel Canoa', 'puebla')).toBe(true);
     expect(coincideRegion('Campeche: Pomuch (maya)', 'campeche')).toBe(true);
     expect(coincideRegion('Nayarit: pueblo cora', 'nayarit')).toBe(true);
+    expect(coincideRegion('Yucatán: pueblo maya', 'yucatan')).toBe(true);
+    expect(coincideRegion('Yucatán: pueblo maya', 'campeche')).toBe(false);
   });
 });

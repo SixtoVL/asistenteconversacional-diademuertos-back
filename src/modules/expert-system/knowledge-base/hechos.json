@@ -164,5 +164,35 @@
     "ambito": "México (UNESCO, patrimonio inmaterial)",
     "fuentes": [{ "fuenteId": "F07", "paginas": "191-192" }],
     "estado": "verified"
+  },
+  {
+    "id": "H017",
+    "tema": "Fechas del Hanal Pixán (maya)",
+    "afirmacion": "En el Hanal Pixán o Comida de las Ánimas del pueblo maya, el 31 de octubre se dedica a los niños (U hanal palal), el 1 de noviembre a los adultos (U hanal nucuch uinicoob) y el 2 de noviembre a la misa pixán (U hanal pixanoob).",
+    "descripcion": "Del 31 de octubre al 2 de noviembre las ánimas reciben permiso para visitar a sus familiares, saborear los platillos preparados y cambiarse de ropas y calzado con las mudas que les proveen los vivos.",
+    "categoria": "tradiciones",
+    "ambito": "Yucatán: pueblo maya",
+    "fuentes": [{ "fuenteId": "F05", "paginas": "1" }],
+    "estado": "verified"
+  },
+  {
+    "id": "H018",
+    "tema": "Altar maya de niños y de adultos",
+    "afirmacion": "El altar maya de niños lleva velas de colores, juguetes, yuca, fotografía y pib; el de adultos lleva velas blancas, jícara con agua, mucbipollo, tamales, chocolate, pan de muerto, atole, cigarros, sal, ropa y calzado.",
+    "descripcion": "Los difuntos requieren cambio de ropa para regresar limpios a su morada y huaraches para el camino; la ofrenda se monta según las posibilidades económicas, sin regla fija (en adultos se usó mantel de hoja de plátano, propio de Yucatán).",
+    "categoria": "ofrendas",
+    "ambito": "Yucatán: pueblo maya",
+    "fuentes": [{ "fuenteId": "F05", "paginas": "1" }],
+    "estado": "verified"
+  },
+  {
+    "id": "H019",
+    "tema": "Cuatro elementos y llamado en la ofrenda maya",
+    "afirmacion": "En la ofrenda maya están presentes el agua, el fuego (tierra roja dentro de la choza), la tierra (flores y frutos) y el aire; las velas representan a las personas dedicadas y se les llama por su nombre para invitarlas a convivir.",
+    "descripcion": "Es tradición que al poner la ofrenda haya un rito con rezandera maya: se prenden las velas y se llama al familiar ('Te ofrezco la luz a ti para que vengas y convivas con nosotros. Te dejo tu agua, atole, maíz'); si son cinco familiares, hay que invocarlos para que no se vayan a otra ofrenda.",
+    "categoria": "simbolos",
+    "ambito": "Yucatán: pueblo maya",
+    "fuentes": [{ "fuenteId": "F05", "paginas": "2" }],
+    "estado": "verified"
   }
 ]

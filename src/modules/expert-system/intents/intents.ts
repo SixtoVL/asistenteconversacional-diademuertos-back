@@ -9,7 +9,7 @@ export interface Intencion {
 }
 
 export interface RegionMatch {
-  id: 'general' | 'puebla' | 'campeche' | 'nayarit';
+  id: 'general' | 'puebla' | 'campeche' | 'nayarit' | 'yucatan' | 'michoacan' | 'veracruz';
   etiqueta: string;
   palabrasClave: string[];
 }
@@ -58,7 +58,7 @@ export const INTENCIONES: Intencion[] = [
   },
   {
     id: 'tradicion',
-    palabrasClave: ['muerte', 'muertos', 'difunto', 'difuntos', 'tradicion', 'tradiciones', 'cora', 'coras', 'canasta', 'canastas', 'huesos', 'pomuch', 'hanal', 'pixan', 'ritual', 'costumbre', 'panteon', 'angelitos', 'tecolote', 'inframundo', 'animas', 'alma', 'velacion'],
+    palabrasClave: ['muerte', 'muertos', 'difunto', 'difuntos', 'tradicion', 'tradiciones', 'cora', 'coras', 'canasta', 'canastas', 'huesos', 'pomuch', 'hanal', 'pixan', 'mukbil', 'ritual', 'costumbre', 'panteon', 'angelitos', 'tecolote', 'inframundo', 'animas', 'alma', 'velacion'],
     terminosBusqueda: ['tradicion', 'ritual', 'costumbre'],
     prioridad: 70,
   },
@@ -74,7 +74,12 @@ export const REGIONES: RegionMatch[] = [
   {
     id: 'campeche',
     etiqueta: 'Campeche',
-    palabrasClave: ['campeche', 'pomuch', 'maya', 'hanal', 'pixan', 'janal'],
+    palabrasClave: ['campeche', 'pomuch', 'maya'],
+  },
+  {
+    id: 'yucatan',
+    etiqueta: 'Yucatán',
+    palabrasClave: ['yucatan', 'yucateca', 'yucateco', 'hanal', 'pixan', 'janal', 'mukbil'],
   },
   {
     id: 'nayarit',

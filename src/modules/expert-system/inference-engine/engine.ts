@@ -82,6 +82,12 @@ export function coincideRegion(ambito: string, region: string): boolean {
       return texto.includes('campeche');
     case 'nayarit':
       return texto.includes('nayarit');
+    case 'yucatan':
+      return texto.includes('yucatan');
+    case 'michoacan':
+      return texto.includes('michoacan');
+    case 'veracruz':
+      return texto.includes('veracruz');
     case 'general':
       return texto === 'general' || texto.startsWith('general') || texto.startsWith('mexico');
     default:
