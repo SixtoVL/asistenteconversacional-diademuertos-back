@@ -224,5 +224,194 @@
     "ambito": "México (general)",
     "fuentes": [{ "fuenteId": "F08", "paginas": "2" }],
     "estado": "verified"
+  },
+  {
+    "id": "H023",
+    "tema": "Origen prehispánico de la tradición",
+    "afirmacion": "La tradición del Día de Muertos nace de las fiestas anuales de los pueblos nahuas prehispánicos, dirigidas a honrar a los muertos y acompañarlos al inframundo; con la evangelización estas fiestas se fundieron con las católicas y de ahí surgió la celebración actual.",
+    "descripcion": "Según el antropólogo Patrick Johansson, para los antiguos mexicanos los muertos seguían participando en la vida del grupo: eran invocados en la siembra, la cacería, nacimientos, matrimonios y otros sucesos. Tras la llegada de los españoles, los misioneros aprovecharon la coincidencia de fechas con Todos los Santos para impulsar el sincretismo religioso.",
+    "categoria": "historia",
+    "ambito": "México (origen nahua; mestizo actual)",
+    "fuentes": [{ "fuenteId": "F01", "paginas": "1-2" }],
+    "estado": "verified"
+  },
+  {
+    "id": "H024",
+    "tema": "Las dos grandes celebraciones mexicas",
+    "afirmacion": "En el calendario nahua había dos celebraciones para los muertos: el Miccailhuitontli, la 'Fiesta de los muertos pequeños' dedicada a los niños fallecidos, y el Huey Miccaihuitl, la 'Fiesta de los muertos grandes' para difuntos adultos y guerreros caídos.",
+    "descripcion": "Estas fiestas anuales se repetían durante los cuatro años posteriores a la muerte, variando fechas y rituales según el tipo de deceso; también se celebraban en meses como Tititl o en la fiesta de Tepeilhuitl, dedicada a los montes.",
+    "categoria": "historia",
+    "ambito": "México (calendario náhuatl prehispánico)",
+    "fuentes": [{ "fuenteId": "F01", "paginas": "2" }],
+    "estado": "verified"
+  },
+  {
+    "id": "H025",
+    "tema": "Sincretismo: por qué 1 y 2 de noviembre",
+    "afirmacion": "El 1 de noviembre se dedica a los niños, por herencia directa del Miccailhuitontli, y el 2 de noviembre se recuerda a los difuntos adultos, con raíz en el Huey Miccaihuitl.",
+    "descripcion": "Las fiestas nahuas coincidían con el otoño, misma época de las católicas de Todos los Santos y los Fieles Difuntos; los misioneros usaron esa proximidad para impulsar la conversión, y con el tiempo ambas celebraciones se fundieron en la tradición actual.",
+    "categoria": "historia",
+    "ambito": "México (mestizo; calendario litúrgico)",
+    "fuentes": [{ "fuenteId": "F01", "paginas": "2" }],
+    "estado": "verified"
+  },
+  {
+    "id": "H026",
+    "tema": "Xantolo huasteco: inicio el 29 de octubre",
+    "afirmacion": "En la Huasteca el Xantolo comienza el 29 de octubre, día de San Miguel Arcángel y de la recolección de las primeras cosechas de elotes, cuando ya se reciben a los difuntos.",
+    "descripcion": "En esta región participan desde tiempos ancestrales las comunidades nahuas, teenek, otomíes y tepehuas; la fiesta de recibimiento incluye danza y disfraces con reminiscencias prehispánicas para espantar a la muerte.",
+    "categoria": "tradiciones",
+    "ambito": "México (Huasteca: Veracruz, San Luis, Hidalgo, Querétaro, Tamaulipas)",
+    "fuentes": [{ "fuenteId": "F02", "paginas": "1" }],
+    "estado": "verified"
+  },
+  {
+    "id": "H027",
+    "tema": "Chicontepec: de mayo a San Andrés",
+    "afirmacion": "En Chicontepec, Huasteca veracruzana, la celebración de muertos empieza en mayo con una primera ofrenda sencilla y termina el 29 de noviembre, día de San Andrés, santo encargado de regresar a los difuntos al mundo de los muertos.",
+    "descripcion": "Cada mes se coloca una ofrenda de comida, bebida y fruta para avisar a los difuntos que se preparen; el 1 de noviembre se reciben a los niños con un arco de plantas de la región y el 2 a los adultos. La ofrenda se comparte entre compadres, elegidos por su calidad.",
+    "categoria": "tradiciones",
+    "ambito": "Veracruz: Chicontepec (Huasteca veracruzana)",
+    "fuentes": [{ "fuenteId": "F02", "paginas": "2-3" }],
+    "estado": "verified"
+  },
+  {
+    "id": "H028",
+    "tema": "Cuanajo: los caballitos de madera",
+    "afirmacion": "En Cuanajo, pueblo maderero a cuatro kilómetros de Pátzcuaro, la ofrenda se coloca sobre caballitos de madera; al muerto del año se le lleva un caballo adornado con mazorcas, calabazas, chayotes o tejocotes.",
+    "descripcion": "Quien recibe el caballo ofrece atole y tamales como sistema de intercambio. Desde el 28 de octubre debe haber ofrenda con comida guisada y hasta el 31 de octubre se reciben caballitos que luego se trasladan al panteón; el 31 es para los angelitos, el 1 para adultos y el 2 se despide a las ánimas.",
+    "categoria": "tradiciones",
+    "ambito": "Michoacán: Cuanajo (Pátzcuaro, purépecha)",
+    "fuentes": [{ "fuenteId": "F02", "paginas": "1-2" }],
+    "estado": "verified"
+  },
+  {
+    "id": "H029",
+    "tema": "Muertos violentos: ofrenda del 28 de octubre",
+    "afirmacion": "En Xayacatlán de Bravo, las familias que sufrieron la muerte violenta de un familiar colocan la ofrenda el 28 de octubre, día en que se cree que llegan las almas de esos difuntos.",
+    "descripcion": "La ofrenda para los muertos violentos es muy sencilla: un plato de comida y una vela encendida. Las demás familias preparan Todo Santos con más antelación.",
+    "categoria": "tradiciones",
+    "ambito": "Puebla: Xayacatlán de Bravo (mixteca)",
+    "fuentes": [{ "fuenteId": "F03c", "paginas": "11" }],
+    "estado": "verified"
+  },
+  {
+    "id": "H030",
+    "tema": "Itacates y angelitos en Xayacatlán",
+    "afirmacion": "En Xayacatlán los itacates se forman con velas, frutas y tortillas enfrijoladas cubiertas con servilletas, y se colocan en canastas y ayates para las almas de mujeres y hombres adultos; no deben ser muy voluminosos para no dificultar el paso de las almas por el árbol horqueta.",
+    "descripcion": "Los morralitos y canastitas para los angelitos inician su viaje de retorno a la una de la mañana del 1 de noviembre; cuando se van los angelitos llegan las almas de los adultos y se encienden veladoras en su honor.",
+    "categoria": "ofrendas",
+    "ambito": "Puebla: Xayacatlán de Bravo (mixteca)",
+    "fuentes": [{ "fuenteId": "F03c", "paginas": "11-12" }],
+    "estado": "verified"
+  },
+  {
+    "id": "H031",
+    "tema": "Ofrendas monumentales de Huaquechula e Izúcar",
+    "afirmacion": "En Huaquechula e Izúcar de Matamoros, sur de Puebla de tradición nahua, la ofrenda a las ánimas es una de las más costosas y vistosas de la región: combina la monumentalidad del altar con ángeles de yeso, papel, telas, velas adornadas y candeleros.",
+    "descripcion": "La de Izúcar se decora con candeleros policromados o bícromos con representaciones mortuorias elaborados para la ocasión, junto con alimentos, dulces, papel picado, flores y sahumerios; en ambos casos la ofrenda se comparte: los vivos degustan lo que dejaron las ánimas.",
+    "categoria": "ofrendas",
+    "ambito": "Puebla: Huaquechula e Izúcar de Matamoros (sur)",
+    "fuentes": [{ "fuenteId": "F03c", "paginas": "14" }],
+    "estado": "verified"
+  },
+  {
+    "id": "H032",
+    "tema": "La levantada de la cruz",
+    "afirmacion": "En Izúcar de Matamoros, la noche del noveno día tras el deceso se realiza la 'levantada de la cruz': cuatro padrinos levantan uno a uno los brazos de la cruz de cal y arena trazada en el piso, empezando por el lado izquierdo del vertical, luego el derecho y al final la cabecera.",
+    "descripcion": "Los padrinos manejan pequeñas escobillas para levantar la cruz mientras avanzan las horas y se rezan rosarios; al día siguiente se lleva la cruz definitiva al cementerio entre flores, rezos y cantos. Tanto el padrino de la cruz como los de la levantada reciben tratamiento de compadres.",
+    "categoria": "tradiciones",
+    "ambito": "Puebla: Izúcar de Matamoros (sur)",
+    "fuentes": [{ "fuenteId": "F03d", "paginas": "18" }],
+    "estado": "verified"
+  },
+  {
+    "id": "H033",
+    "tema": "Montaje de las ofrendas de Huaquechula",
+    "afirmacion": "Las ofrendas de Huaquechula se montan sobre armazones de madera con tablones y polines, instalación eléctrica con más de 24 bombillas, tela de tafetán, satín o terciopelo, y ángeles llorones de yeso; la elaboración consume hasta 20 horas de trabajo y puede llegar a costar hasta medio millón de pesos.",
+    "descripcion": "La instalación rebasa a la familia y da ocupación extra a artesanos del barrio de San Martín, donde la familia Castillo trabaja la alfarería en todas sus etapas: modelan el barro de San Andrés Ahuatelco, lo recubren con blanco de España y lo pintan con colores naturales como el palo de Brasil y la cochinilla para hacer los candeleros únicos de cada altar.",
+    "categoria": "ofrendas",
+    "ambito": "Puebla: Huaquechula (sur)",
+    "fuentes": [{ "fuenteId": "F03d", "paginas": "19" }],
+    "estado": "verified"
+  },
+  {
+    "id": "H034",
+    "tema": "El petate de la ofrenda",
+    "afirmacion": "Los alimentos y objetos de la ofrenda se disponen sobre un petate, en el suelo o sobre una mesa; en los hogares más tradicionales de San Miguel Canoa la ofrenda va en el piso sobre un petate, no en la mesa.",
+    "descripcion": "Conforme se coloca cada cosa se enuncia el nombre del muerto y nada debe tocarse hasta que se levanta la ofrenda; los objetos deben ser nuevos 'porque se los llevan', igual que la comida hecha con la cosecha nueva.",
+    "categoria": "ofrendas",
+    "ambito": "Puebla: San Miguel Canoa",
+    "fuentes": [
+      { "fuenteId": "F06", "paginas": "210" },
+      { "fuenteId": "F06", "paginas": "213" }
+    ],
+    "estado": "verified"
+  },
+  {
+    "id": "H035",
+    "tema": "El copal sahúma para llamar a los difuntos",
+    "afirmacion": "En San Miguel Canoa la habitación donde se monta la ofrenda se llena de humo de copal, pues se sahúma 'para llamarlos y acogerlos' a los difuntos.",
+    "descripcion": "El sahumerio con copal acompaña la ofrenda junto con el aroma de los guisos: el humo ritual con el que se invita a los difuntos a entrar a la casa donde se monta el altar.",
+    "categoria": "simbolos",
+    "ambito": "Puebla: San Miguel Canoa",
+    "fuentes": [{ "fuenteId": "F06", "paginas": "210" }],
+    "estado": "verified"
+  },
+  {
+    "id": "H036",
+    "tema": "El retrato del fallecido",
+    "afirmacion": "En Huejotzingo se lleva al panteón, a las 15:00 horas, un retrato del fallecido junto con incienso, flores y música de banda para acompañar a las ánimas.",
+    "descripcion": "El retrato identifica a la persona recordada y forma parte del cortejo junto con flores e incienso; en los altares de varias regiones la fotografía del difunto ocupa un lugar visible, como en la ofrenda escalonada de Texmelucan.",
+    "categoria": "simbolos",
+    "ambito": "Puebla: Huejotzingo (valle de Texmelucan)",
+    "fuentes": [
+      { "fuenteId": "F04", "paginas": "74" },
+      { "fuenteId": "F04", "paginas": "72" }
+    ],
+    "estado": "verified"
+  },
+  {
+    "id": "H037",
+    "tema": "Quiénes son los angelitos",
+    "afirmacion": "El 31 de octubre se dedica a los 'angelitos', niños o personas que murieron solteros, y el 1 de noviembre a los adultos; el 2 de noviembre se despide a las ánimas con comida y cohetes.",
+    "descripcion": "Se cree que los angelitos van cerca del Creador y su celebración es casi una fiesta, por eso el velorio de los pequeños se invita a niños y a los padrinos de bautizo y confirmación, y se regalan abundantes dulces.",
+    "categoria": "tradiciones",
+    "ambito": "México (Michoacán: Cuanajo; Puebla: Izúcar)",
+    "fuentes": [
+      { "fuenteId": "F02", "paginas": "2" },
+      { "fuenteId": "F03d", "paginas": "18" }
+    ],
+    "estado": "verified"
+  },
+  {
+    "id": "H038",
+    "tema": "El novenario de los difuntos",
+    "afirmacion": "En Izúcar de Matamoros, tras el entierro se rezan novenarios, y las ceremonias para los niños difuntos son las mismas que para los adultos —novenarios, rezos y levantada de cruz—, solo que con menor idea de pena.",
+    "descripcion": "El novenario culmina con la 'levantada de la cruz', la noche del noveno día; para los niños además de comer se regalan abundantes dulces, pues se tiene la certeza de que se convierten en angelitos.",
+    "categoria": "tradiciones",
+    "ambito": "Puebla: Izúcar de Matamoros (sur)",
+    "fuentes": [{ "fuenteId": "F03d", "paginas": "18" }],
+    "estado": "verified"
+  },
+  {
+    "id": "H039",
+    "tema": "La compra mayor y los dulces de alfeñique",
+    "afirmacion": "El lunes anterior al 2 de noviembre se hace la compra mayor: el mercado se llena de flores (cempasúchil, terciopelo, gladiola, nube, crisantema, margarita), panes como hojaldras, rosquetas, pan encimado, conejos y 'muertos', y dulces de alfeñique hechos con azúcar y clara de huevo.",
+    "descripcion": "También se compran frutas como naranjas, tejocotes, jícamas, manzanas y cañas de azúcar, y los ingredientes de los platillos favoritos del difunto: pipián verde, mole poblano, tamales 'tontos' de masa con sal y chocolate.",
+    "categoria": "ofrendas",
+    "ambito": "Puebla: Huaquechula e Izúcar de Matamoros (sur)",
+    "fuentes": [{ "fuenteId": "F03d", "paginas": "18" }],
+    "estado": "verified"
+  },
+  {
+    "id": "H040",
+    "tema": "El Paseo de los Pixanes en Campeche",
+    "afirmacion": "El Paseo de los Pixanes es un desfile de catrines y catrinas: marionetas de papel maché y gente pintada en forma de esqueleto con vestimenta tradicional de la región.",
+    "descripcion": "La celebración campechana combina el desfile con festivales patronales y la tradición de limpieza de huesos de Pomuch; el término maya pixán se refiere al alma o componente anímico de los difuntos.",
+    "categoria": "tradiciones",
+    "ambito": "Campeche",
+    "fuentes": [{ "fuenteId": "F07", "paginas": "188" }],
+    "estado": "verified"
   }
 ]

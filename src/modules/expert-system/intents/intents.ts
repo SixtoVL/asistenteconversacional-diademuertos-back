@@ -33,14 +33,32 @@ export const INTENCIONES: Intencion[] = [
     prioridad: 20,
   },
   {
+    id: 'agradecimiento',
+    palabrasClave: ['gracias', 'grax', 'te lo agradezco', 'muchas gracias', 'agradecido'],
+    terminosBusqueda: [],
+    prioridad: 12,
+  },
+  {
+    id: 'despido',
+    palabrasClave: ['adios', 'bye', 'chao', 'hasta luego', 'nos vemos', 'que te vaya bien', 'cuidate', 'me despido', 'hasta pronto'],
+    terminosBusqueda: [],
+    prioridad: 11,
+  },
+  {
     id: 'recomendar',
     palabrasClave: ['recomienda', 'recomendacion', 'recomiendame', 'preparar', 'preparo', 'preparacion', 'como hago', 'como armo', 'armar', 'guia', 'quiero hacer', 'voy a hacer', 'ayudame con mi ofrenda'],
     terminosBusqueda: ['ofrenda'],
     prioridad: 30,
   },
   {
+    id: 'elementos_ofrenda',
+    palabrasClave: ['que elementos', 'cuales son los elementos', 'que lleva', 'que contiene', 'que tiene la ofrenda', 'lista de elementos', 'componentes'],
+    terminosBusqueda: ['elemento', 'ofrenda'],
+    prioridad: 35,
+  },
+  {
     id: 'significado_elemento',
-    palabrasClave: ['significa', 'significan', 'significado', 'que es', 'cempasuchil', 'flor', 'flores', 'pan', 'panes', 'vela', 'veladora', 'velas', 'veladoras', 'incienso', 'copal', 'foto', 'fotografia', 'fotos', 'retrato', 'altar', 'ofrenda', 'elemento', 'elementos', 'papel picado', 'calavera', 'calaveras', 'calaverita', 'calaveritas', 'cruz', 'cruces', 'agua', 'sal', 'mole', 'atole', 'atoles', 'fruta', 'frutas', 'itacate', 'itacates', 'petate', 'petates'],
+    palabrasClave: ['significa', 'significan', 'significado', 'que es', 'cempasuchil', 'flor', 'flores', 'pan', 'panes', 'vela', 'veladora', 'velas', 'veladoras', 'incienso', 'copal', 'foto', 'fotografia', 'fotos', 'retrato', 'altar', 'ofrenda', 'papel picado', 'calavera', 'calaveras', 'calaverita', 'calaveritas', 'cruz', 'cruces', 'agua', 'sal', 'mole', 'atole', 'atoles', 'fruta', 'frutas', 'itacate', 'itacates', 'petate', 'petates'],
     terminosBusqueda: [],
     prioridad: 40,
   },
@@ -52,14 +70,14 @@ export const INTENCIONES: Intencion[] = [
   },
   {
     id: 'historia',
-    palabrasClave: ['historia', 'origen', 'unesco', 'patrimonio', 'humanidad', 'pasado', 'prehispanico', 'colonial', 'miccailhuitontli', 'todos los santos'],
-    terminosBusqueda: ['historia', 'origen', 'unesco', 'patrimonio'],
+    palabrasClave: ['historia', 'origen', 'unesco', 'patrimonio', 'humanidad', 'pasado', 'prehispanico', 'colonial', 'miccailhuitontli', 'huey miccaihuitl', 'todos los santos', 'sincretismo', 'conquistadores', 'evangelizacion'],
+    terminosBusqueda: ['historia', 'origen', 'unesco', 'patrimonio', 'prehispanico', 'sincretismo', 'miccailhuitontli', 'miccaihuitl', 'todos los santos', 'misioneros'],
     prioridad: 60,
   },
   {
     id: 'tradicion',
-    palabrasClave: ['muerte', 'muertos', 'difunto', 'difuntos', 'tradicion', 'tradiciones', 'cora', 'coras', 'canasta', 'canastas', 'huesos', 'pomuch', 'hanal', 'pixan', 'mukbil', 'xantolo', 'ritual', 'costumbre', 'panteon', 'angelitos', 'tecolote', 'inframundo', 'animas', 'alma', 'velacion'],
-    terminosBusqueda: ['tradicion', 'ritual', 'costumbre'],
+    palabrasClave: ['muerte', 'muertos', 'difunto', 'difuntos', 'tradicion', 'tradiciones', 'cora', 'coras', 'canasta', 'canastas', 'huesos', 'pomuch', 'hanal', 'pixan', 'mukbil', 'xantolo', 'ritual', 'costumbre', 'panteon', 'angelitos', 'tecolote', 'inframundo', 'animas', 'alma', 'velacion', 'levantada', 'cruz', 'padrinos', 'montaje', 'novenario', 'alfenique', 'catrina', 'catrinas', 'pixanes'],
+    terminosBusqueda: ['tradicion', 'ritual', 'costumbre', 'xantolo', 'huasteca', 'caballitos', 'angelitos', 'san andres', 'difuntos', 'huaquechula', 'izucar', 'xayacatlan', 'itacate', 'animas', 'levantada', 'candelero', 'alfareria', 'montaje', 'novenario', 'alfenique', 'catrina', 'pixanes', 'petate', 'copal'],
     prioridad: 70,
   },
 ];
@@ -74,12 +92,22 @@ export const REGIONES: RegionMatch[] = [
   {
     id: 'campeche',
     etiqueta: 'Campeche',
-    palabrasClave: ['campeche', 'pomuch', 'maya'],
+    palabrasClave: ['campeche', 'pomuch'],
   },
   {
     id: 'yucatan',
     etiqueta: 'Yucatán',
-    palabrasClave: ['yucatan', 'yucateca', 'yucateco', 'hanal', 'pixan', 'janal', 'mukbil'],
+    palabrasClave: ['yucatan', 'yucateca', 'yucateco', 'hanal', 'pixan', 'janal', 'mukbil', 'maya'],
+  },
+  {
+    id: 'michoacan',
+    etiqueta: 'Michoacán',
+    palabrasClave: ['michoacan', 'cuanajo', 'patzcuaro', 'purepecha', 'purépecha'],
+  },
+  {
+    id: 'veracruz',
+    etiqueta: 'Veracruz',
+    palabrasClave: ['veracruz', 'chicontepec', 'huasteca veracruzana'],
   },
   {
     id: 'nayarit',
@@ -105,6 +133,7 @@ export const ELEMENTOS: Array<{ id: string; palabrasClave: string[]; terminos: s
   { id: 'fruta', palabrasClave: ['fruta', 'frutas'], terminos: ['fruta'] },
   { id: 'petate', palabrasClave: ['petate', 'petates'], terminos: ['petate'] },
   { id: 'itacate', palabrasClave: ['itacate', 'itacates'], terminos: ['itacate'] },
+  { id: 'dulce', palabrasClave: ['dulce', 'dulces', 'alfenique'], terminos: ['dulce', 'alfenique'] },
 ];
 
 export function normalizar(texto: string): string {

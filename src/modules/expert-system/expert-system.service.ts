@@ -49,6 +49,15 @@ export function consultar(
     (resultado) => `${resultado.intencionId ?? 'sin-intención'} ${JSON.stringify(resultado.datos)}`,
   );
   let caso: Caso = { intencionId: interpretacion.intencionId, datos: interpretacion.datos };
+  if (caso.intencionId === 'saludo') {
+    const ultimoUsuario = [...historial].reverse().find((item) => item.rol === 'usuario');
+    if (ultimoUsuario && interpretar(ultimoUsuario.texto).intencionId === 'saludo') {
+      caso = { ...caso, datos: { ...caso.datos, 'saludo_repetido': 'true' } };
+      if (traza) {
+        traza.datos = caso.datos;
+      }
+    }
+  }
   if (traza) {
     traza.intencionId = caso.intencionId;
     traza.datos = caso.datos;
@@ -106,6 +115,10 @@ function fraseIntencion(traza: TrazaConsulta): string {
       return 'historia';
     case 'saludo':
       return 'saludo';
+    case 'despido':
+      return 'despido';
+    case 'agradecimiento':
+      return 'agradecimiento';
     case 'ayuda':
       return 'ayuda';
     default:

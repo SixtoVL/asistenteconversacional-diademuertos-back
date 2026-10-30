@@ -35,7 +35,7 @@ function buscarParaCaso(caso: Caso, hechos: Hecho[], limite = 3, traza?: TrazaCo
   }, traza);
 }
 
-const REGIONES_ACOTABLES = ['puebla', 'campeche', 'nayarit', 'yucatan'];
+const REGIONES_ACOTABLES = ['puebla', 'campeche', 'nayarit', 'yucatan', 'michoacan', 'veracruz'];
 
 function regionesConHechos(caso: Caso, hechos: Hecho[], traza?: TrazaConsulta): string[] {
   if (!caso.intencionId) {
@@ -53,10 +53,36 @@ export const REGLAS: Regla[] = [
     descripcion: 'Saluda y presenta brevemente las capacidades del asistente.',
     prioridad: 10,
     cuando: (caso) => caso.intencionId === 'saludo',
+    entonces: (caso): Conclusion => ({
+      tipo: 'texto',
+      introduccion:
+        caso.datos['saludo_repetido'] === 'true'
+          ? 'Ya te saludé, pero sigo aquí atento. ¿Qué te gustaría saber: los elementos de la ofrenda, las fechas o las tradiciones?'
+          : '¡Hola! Soy el asistente del Día de Muertos. Puedo contarte sobre la historia, las tradiciones y el significado de las ofrendas, o ayudarte a preparar la tuya. ¿Qué te gustaría saber?',
+      hechos: [],
+    }),
+  },
+  {
+    id: 'R-agradecimiento',
+    descripcion: 'Agradece cuando el usuario da las gracias y sugiere qué preguntar.',
+    prioridad: 12,
+    cuando: (caso) => caso.intencionId === 'agradecimiento',
     entonces: (): Conclusion => ({
       tipo: 'texto',
       introduccion:
-        '¡Hola! Soy el asistente del Día de Muertos. Puedo contarte sobre la historia, las tradiciones y el significado de las ofrendas, o ayudarte a preparar la tuya. ¿Qué te gustaría saber?',
+        '¡De nada! Si quieres seguir, prueba con "¿Qué significa el cempasúchil?" o "quiero preparar una ofrenda".',
+      hechos: [],
+    }),
+  },
+  {
+    id: 'R-despido',
+    descripcion: 'Se despide del usuario cuando reconoce una despedida.',
+    prioridad: 11,
+    cuando: (caso) => caso.intencionId === 'despido',
+    entonces: (): Conclusion => ({
+      tipo: 'texto',
+      introduccion:
+        'Gracias por conversar sobre el Día de Muertos. ¡Vuelve cuando quieras!',
       hechos: [],
     }),
   },
@@ -108,6 +134,18 @@ export const REGLAS: Regla[] = [
     },
   },
   {
+    id: 'R-listar-elementos',
+    descripcion: 'Si preguntan qué elementos lleva o contiene una ofrenda, lista los hechos de la base.',
+    prioridad: 35,
+    cuando: (caso, hechos, traza) =>
+      caso.intencionId === 'elementos_ofrenda' && buscarParaCaso(caso, hechos, 3, traza).length > 0,
+    entonces: (caso, hechos, traza): Conclusion => ({
+      tipo: 'texto',
+      introduccion: 'Una ofrenda típica puede incluir:',
+      hechos: buscarParaCaso(caso, hechos, 3, traza),
+    }),
+  },
+  {
     id: 'R-significado-sin-elemento',
     descripcion: 'Si preguntan por un significado sin elemento reconocible, pide el elemento con opciones.',
     prioridad: 45,
@@ -140,6 +178,26 @@ export const REGLAS: Regla[] = [
     },
   },
   {
+    id: 'R-tradicion-con-region',
+    descripcion: 'Responde tradiciones de la región pedida con sus hechos verificados.',
+    prioridad: 48,
+    cuando: (caso, hechos, traza) =>
+      caso.intencionId === 'tradicion' &&
+      !!caso.datos['region'] &&
+      buscarParaCaso(caso, hechos, 3, traza).length > 0,
+    entonces: (caso, hechos, traza): Conclusion => {
+      const region = caso.datos['region'] ?? 'general';
+      const encontrados = buscarParaCaso(caso, hechos, 3, traza);
+      const etiqueta = REGIONES.find((item) => item.id === region)?.etiqueta ?? 'General';
+      return {
+        tipo: 'resultado_se',
+        titulo: `Tradiciones de ${etiqueta}`,
+        detalle: encontrados.map((hecho) => `• ${hecho.afirmacion}`).join('\n'),
+        hechos: encontrados,
+      };
+    },
+  },
+  {
     id: 'R-responder-hechos',
     descripcion: 'Responde consultas informativas con hechos verificados de la base.',
     prioridad: 50,
@@ -150,6 +208,28 @@ export const REGLAS: Regla[] = [
       introduccion: 'Esto es lo que sé al respecto:',
       hechos: buscarParaCaso(caso, hechos, 3, traza),
     }),
+  },
+  {
+    id: 'R-region-sin-hechos',
+    descripcion: 'Si la consulta acota a una región sin hechos sobre el tema, informa y ofrece las regiones disponibles.',
+    prioridad: 55,
+    cuando: (caso, hechos, traza) =>
+      caso.intencionId !== null &&
+      !!caso.datos['region'] &&
+      buscarParaCaso(caso, hechos, 1, traza).length === 0 &&
+      regionesConHechos(caso, hechos, traza).length > 0,
+    entonces: (caso, hechos, traza): Conclusion => {
+      const region = caso.datos['region'] ?? 'general';
+      const etiqueta = REGIONES.find((item) => item.id === region)?.etiqueta ?? 'general';
+      const disponibles = regionesConHechos(caso, hechos, traza)
+        .map((id) => REGIONES.find((item) => item.id === id)?.etiqueta ?? id)
+        .join(', ');
+      return {
+        tipo: 'texto',
+        introduccion: `De ${etiqueta} no tengo información verificada sobre esto todavía. Regiones con información sobre este tema: ${disponibles}.`,
+        hechos: [],
+      };
+    },
   },
   {
     id: 'R-sin-hechos',
