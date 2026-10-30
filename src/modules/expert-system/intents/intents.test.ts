@@ -32,6 +32,13 @@ describe('interpretar', () => {
     expect(interpretar('Cuéntame del patrimonio UNESCO').intencionId).toBe('historia');
   });
 
+  it('detecta definición del Día de Muertos sin robarle fechas ni significado', () => {
+    expect(interpretar('¿Qué es el Día de Muertos?').intencionId).toBe('definicion');
+    expect(interpretar('¿Por qué se celebra el Día de Muertos?').intencionId).toBe('definicion');
+    expect(interpretar('¿Cuándo se celebra?').intencionId).toBe('fechas');
+    expect(interpretar('¿Qué significa el cempasúchil?').intencionId).toBe('significado_elemento');
+  });
+
   it('devuelve nulo ante texto sin coincidencias', () => {
     const result = interpretar('dksjfh qwerty zzzz');
     expect(result.intencionId).toBeNull();

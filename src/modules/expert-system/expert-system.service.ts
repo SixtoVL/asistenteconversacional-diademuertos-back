@@ -121,6 +121,8 @@ function fraseIntencion(traza: TrazaConsulta): string {
       return 'agradecimiento';
     case 'ayuda':
       return 'ayuda';
+    case 'definicion':
+      return 'definición del Día de Muertos';
     default:
       return 'consulta no reconocida';
   }

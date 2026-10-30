@@ -268,4 +268,29 @@ describe('consultar (KB real)', () => {
     expect(narrativa).toContain('R-responder-hechos.cuando => ✓');
     expect(narrativa).toContain('plantillas.ts::renderConclusion');
   });
+
+  it('responde qué es el Día de Muertos (lote 7: definición)', () => {
+    const q = consultar('¿Qué es el Día de Muertos?');
+    expect(q.type).toBe('texto');
+    if (q.type === 'texto') {
+      expect(q.texto).toContain('define a México');
+      expect(q.fuentes?.map((f) => f.titulo).join(' ')).toContain('F02');
+    }
+    const traza = crearTraza('¿Qué es el Día de Muertos?');
+    consultar('¿Qué es el Día de Muertos?', [], traza);
+    expect(traza.intencionId).toBe('definicion');
+    expect(traza.reglaId).toBe('R-responder-hechos');
+    expect(resumirTraza(traza)).toContain('definición del Día de Muertos');
+  });
+
+  it('responde qué es la ofrenda, el altar y por qué se celebra (lote 7)', () => {
+    const ofrenda = consultar('¿Qué es la ofrenda?');
+    expect(ofrenda.type).toBe('texto');
+    const altar = consultar('¿Qué significa el altar?');
+    expect(altar.type).toBe('texto');
+    const celebra = consultar('¿Por qué se celebra el Día de Muertos?');
+    expect(celebra.type).toBe('texto');
+    const como = consultar('¿Cómo se celebra el Día de Muertos?');
+    expect(como.type).toBe('texto');
+  });
 });

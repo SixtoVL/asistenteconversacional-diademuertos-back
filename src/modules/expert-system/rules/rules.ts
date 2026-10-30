@@ -19,6 +19,7 @@ function terminosDeIntencion(intencionId: string, datos: Record<string, string>)
 function esInformativa(intencionId: string | null): boolean {
   return (
     intencionId === 'significado_elemento' ||
+    intencionId === 'definicion' ||
     intencionId === 'fechas' ||
     intencionId === 'historia' ||
     intencionId === 'tradicion'

@@ -33,6 +33,20 @@ export const INTENCIONES: Intencion[] = [
     prioridad: 20,
   },
   {
+    id: 'definicion',
+    palabrasClave: [
+      'que es el dia de muertos',
+      'que es dia de muertos',
+      'que significa el dia de muertos',
+      'significado del dia de muertos',
+      'definicion del dia de muertos',
+      'por que se celebra',
+      'como se celebra',
+    ],
+    terminosBusqueda: ['dia de muertos'],
+    prioridad: 25,
+  },
+  {
     id: 'agradecimiento',
     palabrasClave: ['gracias', 'grax', 'te lo agradezco', 'muchas gracias', 'agradecido'],
     terminosBusqueda: [],
@@ -134,6 +148,7 @@ export const ELEMENTOS: Array<{ id: string; palabrasClave: string[]; terminos: s
   { id: 'petate', palabrasClave: ['petate', 'petates'], terminos: ['petate'] },
   { id: 'itacate', palabrasClave: ['itacate', 'itacates'], terminos: ['itacate'] },
   { id: 'dulce', palabrasClave: ['dulce', 'dulces', 'alfenique'], terminos: ['dulce', 'alfenique'] },
+  { id: 'ofrenda', palabrasClave: ['ofrenda', 'altar', 'altares'], terminos: ['ofrenda', 'altar'] },
 ];
 
 export function normalizar(texto: string): string {

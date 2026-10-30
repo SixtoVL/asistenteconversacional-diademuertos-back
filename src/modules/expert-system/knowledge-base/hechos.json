@@ -413,5 +413,45 @@
     "ambito": "Campeche",
     "fuentes": [{ "fuenteId": "F07", "paginas": "188" }],
     "estado": "verified"
+  },
+  {
+    "id": "H041",
+    "tema": "Qué es el Día de Muertos",
+    "afirmacion": "El Día de Muertos es la festividad y representación cultural que define a México: todo el país se apresta a celebrarla con diversas variantes e interpretaciones de acuerdo con las comunidades.",
+    "descripcion": "La Secretaría de Cultura lo describe como una de las celebraciones fundamentales de la cultura mexicana; es justamente esa variedad de interpretaciones lo que enriquece la festividad.",
+    "categoria": "historia",
+    "ambito": "México (general)",
+    "fuentes": [{ "fuenteId": "F02", "paginas": "1" }],
+    "estado": "verified"
+  },
+  {
+    "id": "H042",
+    "tema": "La ofrenda como ceremonia de agradecimiento",
+    "afirmacion": "La ofrenda es una ceremonia agrícola donde todos los elementos naturales están presentes, como un agradecimiento por las buenas cosechas.",
+    "descripcion": "Así la describe Amparo Rincón Pérez, jefa de colección del Museo Nacional de las Culturas Populares, al vincular el altar con el ciclo agrícola.",
+    "categoria": "ofrendas",
+    "ambito": "México (general)",
+    "fuentes": [{ "fuenteId": "F02", "paginas": "3" }],
+    "estado": "verified"
+  },
+  {
+    "id": "H043",
+    "tema": "Camino de flores y velas hacia las ofrendas",
+    "afirmacion": "Los caminos adornados con flores de cempasúchil e iluminados por velas guían el alma del finado hasta las ofrendas que los deudos colocan en panteones y hogares.",
+    "descripcion": "En esas ofrendas no pueden faltar platillos, bebidas y objetos que en vida el difunto solía disfrutar.",
+    "categoria": "ofrendas",
+    "ambito": "México (general)",
+    "fuentes": [{ "fuenteId": "F08", "paginas": "1" }],
+    "estado": "verified"
+  },
+  {
+    "id": "H044",
+    "tema": "La celebración como identidad comunitaria",
+    "afirmacion": "En las regiones maya, nahua, zapoteca y mixteca la celebración de los muertos es núcleo central de la identidad, la cosmovisión y la vida social comunitaria de cada grupo.",
+    "descripcion": "Para los pueblos indígenas de México, honrar a los muertos o antepasados constituye una de las costumbres más profundas y dinámicas que actualmente se realizan.",
+    "categoria": "tradiciones",
+    "ambito": "México (general)",
+    "fuentes": [{ "fuenteId": "F08", "paginas": "1" }],
+    "estado": "verified"
   }
 ]
